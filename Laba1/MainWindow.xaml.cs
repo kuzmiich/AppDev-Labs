@@ -24,29 +24,33 @@ namespace Laba1
         {
             InitializeComponent();
         }
+        private string result()
+        {
+            return "";
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string text = result();
+            
+        }
+
+        private string textBox1_Changed(object sender, TextChangedEventArgs e)
+        {
             string text = textBox1.Text;
-            if (text != "")
-            {
-                MessageBox.Show(text);
-            }
+            return text;
         }
 
-        private void textBox1_Changed(object sender, TextChangedEventArgs e)
+        private string textBox2_Changed(object sender, TextChangedEventArgs e)
         {
-
+            string text = textBox2.Text;
+            return text;
         }
 
-        private void textBox2_Changed(object sender, TextChangedEventArgs e)
+        private string textBox3_Changed(object sender, TextChangedEventArgs e)
         {
-
-        }
-
-        private void textBox3_Changed(object sender, TextChangedEventArgs e)
-        {
-
+            string text = textBox3.Text;
+            return text;
         }
     }
 }

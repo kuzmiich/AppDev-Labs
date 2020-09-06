@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba1"
         mc:Ignorable="d"
-        Title="Лаб. работа N1  Ст гр." Height="460" Width="360">
+        Title="Лаб. работа N1  Ст.гр. 10701219 Кузьмича И.В." Height="460" Width="360">
     <Grid x:Name="grid1" Margin="0,0,0,5">
         <Grid HorizontalAlignment="Center" Height="184" VerticalAlignment="Top" Width="369">
             <Label x:Name="label1" Content="Введите значение x" HorizontalAlignment="Left" Margin="44,14,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="195,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" TextChanged="textBox1_Changed"/>
-           
+            <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="195,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" TextChanged="textBox1_Changed"/>
+
             <Label x:Name="label2" Content="Введите значение y" HorizontalAlignment="Left" Margin="44,55,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="195,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" TextChanged="textBox2_Changed"/>
+            <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="195,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" TextChanged="textBox2_Changed"/>
 
             <Label x:Name="label3" Content="Введите значение z" HorizontalAlignment="Left" Margin="44,97,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="195,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" TextChanged="textBox2_Changed"/>
+            <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="195,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" TextChanged="textBox3_Changed"/>
 
             <Label x:Name="label" Content="Результат выполнения программы:" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Bottom" Width="210"/>
         </Grid>
-        <TextBox Height="145" VerticalAlignment="Top" Margin="50,189,50,0" IsReadOnly="True"/>
-        <Button Content="Выполнить" Margin="109,339,109,60" Click="Button_Click"/>
+        <TextBox Height="135" VerticalAlignment="Top" Margin="35,189,35,0" IsReadOnly="True"/>
+        <Button Content="Выполнить" Margin="100,360,100,0" VerticalAlignment="Top" Click="Button_Click" Height="34"/>
     </Grid>
 </Window>
