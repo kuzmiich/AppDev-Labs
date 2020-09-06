@@ -38,7 +38,6 @@ namespace Laba1
                 + "Y = " + Num2 + "\n"
                 + "Z = " + Num3 + "\n"
                 + "Результат = " + Math.Round(result, 2);
-
         }
     }
 }
