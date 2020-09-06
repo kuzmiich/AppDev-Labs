@@ -24,33 +24,21 @@ namespace Laba1
         {
             InitializeComponent();
         }
-        private string result()
-        {
-            return "";
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string text = result();
-            
-        }
+            string Num1 = textBox1.Text;
+            string Num2 = textBox2.Text;
+            string Num3 = textBox3.Text;
+            double x = Convert.ToDouble(Num1);
+            double y = Convert.ToDouble(Num2);
+            double z = Convert.ToDouble(Num3);
+            double result = (Math.Pow(y,(x+1)) / (Math.Pow(Math.Abs(y - 2), 1/3) + 3)) + ((x + (y/2))/(2 * Math.Abs(x + y)) * Math.Pow(x + 1, -1/Math.Sin(z)));
+            OutPanel.Text = "X = " + Num1 + "\n"
+                + "Y = " + Num2 + "\n"
+                + "Z = " + Num3 + "\n"
+                + "Результат = " + Math.Round(result, 2);
 
-        private string textBox1_Changed(object sender, TextChangedEventArgs e)
-        {
-            string text = textBox1.Text;
-            return text;
-        }
-
-        private string textBox2_Changed(object sender, TextChangedEventArgs e)
-        {
-            string text = textBox2.Text;
-            return text;
-        }
-
-        private string textBox3_Changed(object sender, TextChangedEventArgs e)
-        {
-            string text = textBox3.Text;
-            return text;
         }
     }
 }
