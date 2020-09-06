@@ -23,6 +23,7 @@ namespace Laba1
         public MainWindow()
         {
             InitializeComponent();
+            Console.WriteLine("Hello");
         }
     }
 }
