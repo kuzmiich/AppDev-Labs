@@ -24,5 +24,29 @@ namespace Laba1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string text = textBox1.Text;
+            if (text != "")
+            {
+                MessageBox.Show(text);
+            }
+        }
+
+        private void textBox1_Changed(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox2_Changed(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox3_Changed(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
