@@ -25,7 +25,6 @@ namespace Laba3
         {
             InitializeComponent();
         }
-
         private void Main()
         {
             double xn, xk;
@@ -34,17 +33,18 @@ namespace Laba3
             Console.WriteLine("Введите xk");
             xk = Convert.ToDouble(Console.ReadLine());
 
+            Function_Yx(xn);
             FunctionSx(xn, xk);
 
-            Console.WriteLine("|   x   |    F      |   n   |\n");
+            Console.WriteLine("|   x   |    F      |\n");
             Console.WriteLine("-------------------------------------------------\n");
 
             //Console.WriteLine(String.Format("| {0:f2} | {1:f10} | {2:d5}|\n", xn, sum, n));
             Console.WriteLine("-------------------------------------------------\n");
         }
-        private double Function_Yx()
+        private double Function_Yx(double x)
         {
-            return 1;
+            return 1/4 * ((x + 1)/Sqrt(x) * Asinh(Sqrt(x))-Acosh(Sqrt(x)));
         }
         private List<List> FunctionSx(double xn, double xk)
         {
@@ -62,7 +62,7 @@ namespace Laba3
                 int n = 0;
                 while (n < 500)
                 {
-                    T = ((n + 1)) * xn / ((4 * n + 1) * (Pow(xn, 2)));
+                    T = ((n + 1) * xn / ((4 * n + 1) * Pow(xn, 2)));
                     f *= T;
                     sum += f;
                     n++;
