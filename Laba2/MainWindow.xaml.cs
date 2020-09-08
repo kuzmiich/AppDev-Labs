@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using static System.Math;
 namespace Laba2
 {
     /// <summary>
@@ -20,9 +20,13 @@ namespace Laba2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private MainWindow()
         {
             InitializeComponent();
+        }
+        private decimal Q(decimal fx, decimal x, decimal y, decimal z)
+        {
+            return Max(fx + y + z, x*y*z) / Min(fx + y + z, x * y * z);
         }
     }
 }

@@ -43,19 +43,16 @@ namespace Laba1
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string str1 = textBox1.Text;
-            string Str2 = textBox2.Text;
-            string Str3 = textBox3.Text;
-            double x = ConvertToDouble(str1);
-            double y = ConvertToDouble(str1);
-            double z = ConvertToDouble(str1);
+            double x = ConvertToDouble(textBox1.Text);
+            double y = ConvertToDouble(textBox2.Text);
+            double z = ConvertToDouble(textBox3.Text);
 
             double result = Calculate(x, y, z);
-            OutPanel.Text = "g = (y^(x+1) / (|x-y|^(1/3) + 3)) + ((x + y/2) / 2*|x+y|(x+1)^(-1/sin(z)))"+"\n"
-                + "X = " + str1 + "\n"
-                + "Y = " + Str2 + "\n"
-                + "Z = " + Str3 + "\n"
-                + "Результат = " + Round(result, 2);
+            OutPanel.Text = "g = (y^(x+1) / (|x-y|^(1/3) + 3)) + ((x + y/2) / 2*|x+y|(x+1)^(-1/sin(z)))\n"
+                + $"X = { x }\n"
+                + $"Y = { y }\n"
+                + $"Z = { z }\n"
+                + $"Результат = { Round(result, 2) }";
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba1"
         mc:Ignorable="d"
-        Title="Лаб. работа N1  Ст.гр. 10701219 Кузьмича И.В." Height="460" Width="360">
+        Title="Лаб. работа N1  Ст.гр. 10701219 Кузьмича И.В." MinHeight="460" MinWidth="360" Height="460" Width="360">
     <Grid x:Name="grid1" Margin="0,0,0,5">
         <Grid HorizontalAlignment="Center" Height="184" VerticalAlignment="Top" Width="369">
             <Label x:Name="label1" Content="Введите значение x" HorizontalAlignment="Left" Margin="44,14,0,0" VerticalAlignment="Top"/>

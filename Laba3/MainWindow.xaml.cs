@@ -25,6 +25,7 @@ namespace Laba3
         {
             InitializeComponent();
         }
+
         private void Main()
         {
             double xn, xk;
@@ -45,12 +46,13 @@ namespace Laba3
         {
             return 1;
         }
-        private List<double> FunctionSx(double xn, double xk)
+        private List<List> FunctionSx(double xn, double xk)
         {
             int k = 10;
             double h = (xk - xn) / k;
-            List<double> sx_list = new List<double>() {};
-            List<double> xn_list = new List<double>() { };
+            List<double> SX_list = new List<double>() {};
+            List<double> xn_list = new List<double>() {};
+            List<List> final_list = new List <List>() {};
 
             double f, T, sum;
             while (xn <= xk)
@@ -65,11 +67,13 @@ namespace Laba3
                     sum += f;
                     n++;
                 }
-                
-                sx_list.Add(sum);
+                SX_list.Add(sum);
+                xn_list.Add(xn);
                 xn += h;
             }
-            return sx_list;
+            //final_list.Add(SX_list);
+
+            return final_list;
         }
     }
 }
