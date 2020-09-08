@@ -34,11 +34,19 @@ namespace Laba1
             string Num1 = textBox1.Text;
             string Num2 = textBox2.Text;
             string Num3 = textBox3.Text;
-            double x = Convert.ToDouble(Num1);
-            double y = Convert.ToDouble(Num2);
-            double z = Convert.ToDouble(Num3);
+            double x = 0, y = 0, z = 0;
+            try
+            {
+                x = Convert.ToDouble(Num1);
+                y = Convert.ToDouble(Num2);
+                z = Convert.ToDouble(Num3);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error, ", ex);
+            }
             double result = Calculate(x, y, z);
-            OutPanel.Text = ""
+            OutPanel.Text = "g = (y^(x+1) / (|x-y|^(1/3) + 3)) + ((x + y/2) / 2*|x+y|(x+1)^(-1/sin(z)))"+"\n"
                 + "X = " + Num1 + "\n"
                 + "Y = " + Num2 + "\n"
                 + "Z = " + Num3 + "\n"
