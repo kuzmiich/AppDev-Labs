@@ -18,26 +18,23 @@
         </Grid.RowDefinitions>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="129">
             <Label Content="X =" Width="30" Height="26" Margin="31,18,0,85" HorizontalAlignment="Left"/>
-            <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="66,21,10,88"/>
+            <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="66,22,10,85"/>
             <Label Content="Y =" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Center" Width="30" Height="26"/>
-            <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top"  Margin="66,56,10,0"/>
+            <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top"  Margin="66,57,10,0"/>
             <Label Content="Z =" HorizontalAlignment="Left" Margin="31,87,0,0" VerticalAlignment="Top" Width="30" Height="26"/>
-            <TextBox x:Name="textBox3" TextWrapping="NoWrap" Height="20" Margin="66,93,10,16"/>
-
+            <TextBox x:Name="textBox3" TextWrapping="NoWrap" Height="20" Margin="66,91,10,16"/>
         </Grid>
 
-        <CheckBox Grid.Column="1" Content="MaxAbs"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="18" Margin="0 10 0 0"></CheckBox>
-        <Label Content="U(x)" Height="25" Width="30" Grid.Column="1" Margin="52,30,118,93"/>
-        <Border BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Margin="34,43,25,10">
-            <StackPanel x:Name="blockCheckBox" Margin="-1,-1,1,-1">
-                <RadioButton  x:Name="checkBox" Content="Cos(x)" Margin="0,6,0,10" IsChecked="True"/>
-                <RadioButton  x:Name="checkBox1" Content="Sin(x)" Margin="0,0,0,10"/>
-                <RadioButton  x:Name="checkBox2" Content="Tg(x)" Margin="0,0,0,10"/>
+        <CheckBox x:Name="MaxAbs" Grid.Column="1" Content="MaxAbs"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="18" Margin="0,4,0,0"></CheckBox>
+        <GroupBox Header="U(x)" BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Margin="34,22,21,21">
+            <StackPanel Margin="-1,-1,1,-1">
+                <RadioButton GroupName="MathRadioButtons" x:Name="checkBox1" Content="Cos(x)" Margin="0,6,0,10" IsChecked="True"/>
+                <RadioButton GroupName="MathRadioButtons" x:Name="checkBox2" Content="Sin(x)" Margin="0,0,0,10"/>
+                <RadioButton GroupName="MathRadioButtons" x:Name="checkBox3" Content="Tg(x)" Margin="0,0,0,10"/>
             </StackPanel>
-        </Border>
-        <TextBox x:Name="Output" Margin="30,20,25,20" TextWrapping="Wrap" VerticalAlignment="Center" Height="200" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2"/>
+        </GroupBox>
+        <TextBox x:Name="outPanel" Margin="10,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="232" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2"/>
 
-
-        <Button x:Name="mainBtn" Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,20" Width="120"  Height="30" Grid.Row="2" Grid.ColumnSpan="2" />
+        <Button x:Name="MainBtn" Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,20" Width="120"  Height="30" Grid.Row="2" Grid.ColumnSpan="2" Click="MainBtn_Click" />
     </Grid>
 </Window>

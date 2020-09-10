@@ -36,13 +36,54 @@ namespace Laba2
                 return 0;
             }
         }
-        private decimal Q(decimal fx, decimal x, decimal y, decimal z)
+        private double Q(double fx, double x, double y, double z)
         {
-            return Max(fx + y + z, x*y*z) / Min(fx + y + z, x * y * z);
+            return Max(fx + y + z, x * y * z) / Min(fx + y + z, x * y * z);
         }
-        private void Main()
+        private double FindMaxAbs(double fx, double x, double y, double z)
         {
-
+            int count = 4;
+            double max = 0;
+            double[] arr = new double[] { fx, x, y, z };
+            for (int i = 0; i < count; i++)
+            {
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        private void MainBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double x = ConvertToDouble(textBox1.Text);
+            double y = ConvertToDouble(textBox2.Text);
+            double z = ConvertToDouble(textBox3.Text);
+            double fx = Cos(x);
+            if (checkBox1.IsChecked == true)
+            {
+                fx = Cos(x);
+            }
+            else if (checkBox2.IsChecked == true)
+            {
+                fx = Sin(x);
+            }
+            else if (checkBox3.IsChecked == true)
+            {
+                fx = Tan(x);
+            }
+            if (MaxAbs.IsChecked == true)
+            {
+                double maxAbs = FindMaxAbs(fx, x, y, z);
+            }
+            double result = Q(fx, x, y, z);
+            OutPanel.Text = "g = (y^(x+1) / (|x-y|^(1/3) + 3)) + ((x + y/2) / 2*|x+y|(x+1)^(-1/sin(z)))\n"
+                + $"X = { x }\n"
+                + $"Y = { y }\n"
+                + $"Z = { z }\n"
+                +$"F(x)={ fx }\n"
+                +$"MaxAbs={ MaxAbs }\n"
+                + $"Результат = { Round(result, 2) }";
         }
     }
 }
