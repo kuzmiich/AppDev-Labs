@@ -25,32 +25,42 @@ namespace Laba3
         {
             InitializeComponent();
         }
-        private void MainBtnClick(object sender)
+        private void MainBtnClick(object sender, RoutedEventArgs e)
         {
             double xn, xk;
             xn = Convert.ToDouble(textBox1.Text);
             xk = Convert.ToDouble(textBox2.Text);
-
-            Function_Yx(xn);
-            FunctionSx(xn, xk);
-
-            Console.WriteLine("|   x   |    F      |\n");
-            Console.WriteLine("-------------------------------------------------\n");
-
-            //Console.WriteLine(String.Format("| {0:f2} | {1:f10} | {2:d5}|\n", xn, sum, n));
-            Console.WriteLine("-------------------------------------------------\n");
-        }
-        private double Function_Yx(double x)
-        {
-            return 1/4 * ((x + 1)/Sqrt(x) * Asinh(Sqrt(x))-Acosh(Sqrt(x)));
-        }
-        private List<List> FunctionSx(double xn, double xk)
-        {
             int k = 10;
             double h = (xk - xn) / k;
-            List<double> SX_list = new List<double>() {};
-            List<double> xn_list = new List<double>() {};
-            List<List> final_list = new List <List>() {};
+            var YX = FunctionYx(xn, xk, h);
+            var SX = FunctionSx(xn, xk, h);
+
+            outPanel.Text = "|   x   |    S(x)     | Y(x)\n"
+            + "-----------------------------------\n";
+            while (xn < xk)
+            {
+                outPanel.Text += 
+                $"| {xn:F5} | {SX[0]:F3} | {YX[0]:F3}|\n"
+                + "-------------------------------------\n";
+                xn += h;
+            }
+            
+        }
+        private List<double> FunctionYx(double xn, double xk, double h)
+        {
+            List<double> fList = new List<double>() { };
+            double f;
+            while (xn <= xk)
+            {
+                f = 1 / 4 * ( ((xn + 1) / Sqrt(xn)) * Asinh(Sqrt(xn)) - Acosh(Sqrt(xn)));
+                fList.Add(f);
+                xn += h;
+            }
+            return fList;
+        }
+        private List<double> FunctionSx(double xn, double xk, double h)
+        {
+            List<double> sxList = new List<double>() {};
 
             double f, T, sum;
             while (xn <= xk)
@@ -65,13 +75,10 @@ namespace Laba3
                     sum += f;
                     n++;
                 }
-                SX_list.Add(sum);
-                xn_list.Add(xn);
+                sxList.Add(sum);
                 xn += h;
             }
-            //final_list.Add(SX_list);
-
-            return final_list;
+            return sxList;
         }
     }
 }

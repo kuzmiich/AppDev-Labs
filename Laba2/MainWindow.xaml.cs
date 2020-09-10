@@ -82,8 +82,8 @@ namespace Laba2
                 + $"X = { x }\n"
                 + $"Y = { y }\n"
                 + $"Z = { z }\n"
-                +$"F(x)={ fx }\n"
-                +$"MaxAbs={ maxAbs }\n"
+                + $"F(x)={ fx }\n"
+                + $"MaxAbs={ maxAbs }\n"
                 + $"Результат = { Round(result, 2) }";
         }
     }
