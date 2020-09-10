@@ -25,13 +25,11 @@ namespace Laba3
         {
             InitializeComponent();
         }
-        private void Main()
+        private void MainBtnClick(object sender)
         {
             double xn, xk;
-            Console.WriteLine("Введите xn");
-            xn = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите xk");
-            xk = Convert.ToDouble(Console.ReadLine());
+            xn = Convert.ToDouble(textBox1.Text);
+            xk = Convert.ToDouble(textBox2.Text);
 
             Function_Yx(xn);
             FunctionSx(xn, xk);
