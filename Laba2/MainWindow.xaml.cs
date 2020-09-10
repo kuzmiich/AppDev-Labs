@@ -47,9 +47,9 @@ namespace Laba2
             double[] arr = new double[] { fx, x, y, z };
             for (int i = 0; i < count; i++)
             {
-                if (arr[i] > max)
+                if (Abs(arr[i]) > max)
                 {
-                    max = arr[i];
+                    max = Abs(arr[i]);
                 }
             }
             return max;
@@ -72,17 +72,18 @@ namespace Laba2
             {
                 fx = Tan(x);
             }
+            double maxAbs = 0;
             if (MaxAbs.IsChecked == true)
             {
-                double maxAbs = FindMaxAbs(fx, x, y, z);
+                maxAbs = FindMaxAbs(fx, x, y, z);
             }
             double result = Q(fx, x, y, z);
-            OutPanel.Text = "g = (y^(x+1) / (|x-y|^(1/3) + 3)) + ((x + y/2) / 2*|x+y|(x+1)^(-1/sin(z)))\n"
+            outPanel.Text = "\n"
                 + $"X = { x }\n"
                 + $"Y = { y }\n"
                 + $"Z = { z }\n"
                 +$"F(x)={ fx }\n"
-                +$"MaxAbs={ MaxAbs }\n"
+                +$"MaxAbs={ maxAbs }\n"
                 + $"Результат = { Round(result, 2) }";
         }
     }
