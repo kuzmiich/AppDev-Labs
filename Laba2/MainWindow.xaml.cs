@@ -78,7 +78,7 @@ namespace Laba2
                 maxAbs = FindMaxAbs(fx, x, y, z);
             }
             double result = Q(fx, x, y, z);
-            outPanel.Text = "\n"
+            outPanel.Text = "max(f(x)+y+z, x*y*z) / min(f(x)+y+z, x*y*z)\n"
                 + $"X = { x }\n"
                 + $"Y = { y }\n"
                 + $"Z = { z }\n"
