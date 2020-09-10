@@ -19,7 +19,7 @@
 
             <Label x:Name="label" Content="Результат выполнения программы:" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Bottom" Width="210"/>
         </Grid>
-        <TextBox x:Name="OutPanel" Height="135" VerticalAlignment="Top" Margin="35,189,35,0" IsReadOnly="True"/>
+        <TextBox x:Name="OutPanel" Height="135" VerticalAlignment="Top" Margin="35,189,35,0" IsReadOnly="True" TextWrapping="Wrap"/>
         <Button Content="Выполнить" Margin="100,360,100,0" VerticalAlignment="Top" Click="Button_Click" Height="34"/>
     </Grid>
 </Window>

@@ -20,13 +20,29 @@ namespace Laba2
     /// </summary>
     public partial class MainWindow : Window
     {
-        private MainWindow()
+        public MainWindow()
         {
             InitializeComponent();
+        }
+        private double ConvertToDouble(string value)
+        {
+            try
+            {
+                return Convert.ToDouble(value);
+            }
+            catch (System.FormatException ex)
+            {
+                Console.WriteLine("Error ", ex);
+                return 0;
+            }
         }
         private decimal Q(decimal fx, decimal x, decimal y, decimal z)
         {
             return Max(fx + y + z, x*y*z) / Min(fx + y + z, x * y * z);
+        }
+        private void Main()
+        {
+
         }
     }
 }
