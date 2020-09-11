@@ -25,47 +25,38 @@ namespace Laba3
         {
             InitializeComponent();
         }
-        private void MainBtnClick(object sender, RoutedEventArgs e)
+        private double ConvertToDouble(string value)
         {
-            double xn, xk;
-            xn = Convert.ToDouble(textBox1.Text);
-            xk = Convert.ToDouble(textBox2.Text);
-            int k = 10;
-            double h = (xk - xn) / k;
-            var YX = FunctionYx(xn, xk, h);
-            var SX = FunctionSx(xn, xk, h);
-
-            outPanel.Text = "|   x   |    S(x)     | Y(x)\n"
-            + "-----------------------------------\n";
-            while (xn < xk)
+            try
             {
-                outPanel.Text += 
-                $"| {xn:F5} | {SX[0]:F3} | {YX[0]:F3}|\n"
-                + "-------------------------------------\n";
-                xn += h;
+                return Convert.ToDouble(value);
             }
-            
+            catch (System.FormatException ex)
+            {
+                Console.WriteLine("Error ", ex);
+                return 0;
+            }
         }
         private List<double> FunctionYx(double xn, double xk, double h)
         {
             List<double> fList = new List<double>() { };
-            double f;
             while (xn <= xk)
             {
-                f = 1 / 4 * ( ((xn + 1) / Sqrt(xn)) * Asinh(Sqrt(xn)) - Acosh(Sqrt(xn)));
-                fList.Add(f);
+                double yx = (1 / 4) * ((xn + 1) / Sqrt(xn) * Asinh(Sqrt(xn))) - Acosh(Sqrt(xn));
+                fList.Add(yx);
                 xn += h;
+                xn = Round(xn, 3);
             }
             return fList;
         }
         private List<double> FunctionSx(double xn, double xk, double h)
         {
-            List<double> sxList = new List<double>() {};
+            List<double> sxList = new List<double>() { };
 
             double f, T, sum;
             while (xn <= xk)
             {
-                f = 1;
+                f = xn / 6;
                 sum = f;
                 int n = 0;
                 while (n < 500)
@@ -77,8 +68,33 @@ namespace Laba3
                 }
                 sxList.Add(sum);
                 xn += h;
+                xn = Round(xn, 3);
             }
             return sxList;
+        }
+        private void MainBtnClick(object sender, RoutedEventArgs e)
+        {
+            double xn, xk;
+            xn = ConvertToDouble(textBox1.Text);
+            xk = ConvertToDouble(textBox2.Text);
+            int k = 12;
+            double h = (xk - xn) / k;
+            var YX = FunctionYx(xn, xk, h);
+            var SX = FunctionSx(xn, xk, h);
+
+            outPanel.Text = "|   x   |  S(x)  |  Y(x) |\n"
+                            + "---------------------------\n";
+            int i = 0;
+            while (xn <= xk)
+            {
+                outPanel.Text += 
+                $"| {xn:F3} | {SX[i]:F3} | {YX[i]:F3} |\n"
+                + "--------------------------\n";
+                i++;
+                xn += h;
+                xn = Round(xn, 3);
+            }
+            
         }
     }
 }
