@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba2", "Laba2\Laba2.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba3", "Laba3\Laba3.csproj", "{4AD1B3C5-F73D-40BD-AADA-9214DA66131B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{122E8745-7E92-42E9-887A-DB9341AD2E50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba4", "Laba4\Laba4.csproj", "{0B83FC4F-6417-4351-8E3C-BC4F7FDD4CDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{4AD1B3C5-F73D-40BD-AADA-9214DA66131B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AD1B3C5-F73D-40BD-AADA-9214DA66131B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AD1B3C5-F73D-40BD-AADA-9214DA66131B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{122E8745-7E92-42E9-887A-DB9341AD2E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{122E8745-7E92-42E9-887A-DB9341AD2E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{122E8745-7E92-42E9-887A-DB9341AD2E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{122E8745-7E92-42E9-887A-DB9341AD2E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B83FC4F-6417-4351-8E3C-BC4F7FDD4CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B83FC4F-6417-4351-8E3C-BC4F7FDD4CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B83FC4F-6417-4351-8E3C-BC4F7FDD4CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B83FC4F-6417-4351-8E3C-BC4F7FDD4CDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
