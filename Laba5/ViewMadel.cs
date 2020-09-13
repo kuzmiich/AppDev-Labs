@@ -22,7 +22,7 @@ namespace Laba4
             int count = 0;
             for (int i = 0; i < str.Length; i++)
             {
-                if ((str[i] == ' ') && (i != 0) && (str[i - 1] != ' '))
+                if (str[i] == ' ' && i != 0 && str[i - 1] != ' ')
                 {
                     count++;
                 }

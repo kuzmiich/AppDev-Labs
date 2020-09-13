@@ -46,5 +46,10 @@ namespace Laba6
         {
 
         }
+
+        private void FIO_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

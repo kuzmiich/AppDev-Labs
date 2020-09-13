@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,5 +22,23 @@ namespace Laba5
         {
             InitializeComponent();
         }
+
+        private void ComboBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        /*private void ExitBtnClick(object sender, CancelEventArgs e)
+        {
+            var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
+                                           MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if (response == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Application.Current.Shutdown();
+            }
+        }*/
     }
 }
