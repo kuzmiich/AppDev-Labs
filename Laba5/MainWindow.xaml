@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba5"
         mc:Ignorable="d"
-        Title="MainWindow" MaxHeight="500" MaxWidth="600" MinHeight="500" MinWidth="600">
+        Title="Лаб.раб. N5" MaxHeight="500" MaxWidth="600" MinHeight="500" MinWidth="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="59*"/>
