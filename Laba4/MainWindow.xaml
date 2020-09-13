@@ -5,33 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba4"
         mc:Ignorable="d"
-        Title="MainWindow" MaxHeight="500" MaxWidth="600" MinHeight="500" MinWidth="600">
+        Title="Лаб.раб. N4" MinWidth="600" MinHeight="500" MaxWidth="800" MaxHeight="700" Width="600" Height="500">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="283*"/>
-            <ColumnDefinition Width="180*"/>
-            <ColumnDefinition Width="180*"/>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="68*"/>
-            <RowDefinition Height="147*"/>
-            <RowDefinition Height="auto" MinHeight="54.047"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="363*"/>
+            <RowDefinition Height="auto" MinHeight="50"/>
         </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="129">
-            <Label Content="X1=" Width="30" Height="26" Margin="32,18,0,85" HorizontalAlignment="Left"/>
-            <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="66,22,10,85"/>
-            <Label Content="X2=" HorizontalAlignment="Left" Margin="32,61,0,43" Width="30"/>
-            <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top" Margin="66,66,10,0"/>
-        </Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="129" Grid.Column="1">
-            <Label Content="N=" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="30" Height="26"/>
-            <TextBox x:Name="textBox3" TextWrapping="NoWrap" Height="20" Margin="66,22,10,84"/>
-            <Label Content="H=" HorizontalAlignment="Left" Margin="32,60,0,0" VerticalAlignment="Top" Width="30" Height="26"/>
-            <TextBox x:Name="textBox4" TextWrapping="NoWrap" Height="20" Margin="66,64,10,0" VerticalAlignment="Top"/>
-        </Grid>
 
-        <TextBox x:Name="outPanel" Margin="30,0,30,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="260" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Grid Grid.ColumnSpan="3" Grid.Column="0" VerticalAlignment="Center" Height="88">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Width="208" Height="40" Margin="20,0,0,0">
+                <Label Content="Размерность массива" Width="auto" Height="26" Margin="10,7,0,7" HorizontalAlignment="Left"/>
+                <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" HorizontalAlignment="Right" Width="60" Margin="0,12,0,8"/>
+            </Grid>
+            <Button VerticalAlignment="Center" HorizontalAlignment="Right" Content="Изменить размерность массива" Margin="0,5,20,0" Width="320" Height="24"/>
+        </Grid>
+        <DataGrid x:Name="dataGrid2" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding myElements1}" Grid.Column="0"/>
+        <DataGrid x:Name="dataGrid1" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding myElements2}" Grid.Column="1"/>
+        <DataGrid x:Name="dataGrid3" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding myElements3}" Grid.Column="2"/>
 
-        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="108,0,0,0" Width="384"  Height="30" Grid.Row="2" Grid.ColumnSpan="3" Click="MainBtnClick" />
+        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="560"  Height="26" Grid.Row="2" Grid.ColumnSpan="3" Click="MainBtnClick" Width="560"/>
     </Grid>
 </Window>
