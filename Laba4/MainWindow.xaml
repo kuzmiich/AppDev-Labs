@@ -23,12 +23,12 @@
                 <Label Content="Размерность массива" Width="auto" Height="26" Margin="10,7,0,7" HorizontalAlignment="Left"/>
                 <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" HorizontalAlignment="Right" Width="60" Margin="0,12,0,8"/>
             </Grid>
-            <Button VerticalAlignment="Center" HorizontalAlignment="Right" Content="Изменить размерность массива" Margin="0,5,20,0" Width="320" Height="24"/>
+            <Button VerticalAlignment="Top" HorizontalAlignment="Right" Content="Изменить размерность массива" Margin="0,34,10,0" Width="330" Height="24"/>
         </Grid>
         <DataGrid x:Name="dataGrid2" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding myElements1}" Grid.Column="0"/>
         <DataGrid x:Name="dataGrid1" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding myElements2}" Grid.Column="1"/>
         <DataGrid x:Name="dataGrid3" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding myElements3}" Grid.Column="2"/>
 
-        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="560"  Height="26" Grid.Row="2" Grid.ColumnSpan="3" Click="MainBtnClick" Width="560"/>
+        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="560"  Height="26" Grid.Row="2" Grid.ColumnSpan="3" Click="MainBtnClick"/>
     </Grid>
 </Window>
