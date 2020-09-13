@@ -42,10 +42,10 @@ namespace Laba3
             List<double> fList = new List<double>() { };
             while (xn <= xk)
             {
-                double yx = (1 / 4) * ((xn + 1) / Sqrt(xn) * Asinh(Sqrt(xn))) - Acosh(Sqrt(xn));
+                double yx = (1 / 4.0) * ((xn + 1) / Sqrt(xn) * Sinh(Sqrt(xn)) - Cosh(Sqrt(xn)));
                 fList.Add(yx);
                 xn += h;
-                xn = Round(xn, 3);
+                xn = Round(xn, 2);
             }
             return fList;
         }
@@ -58,17 +58,17 @@ namespace Laba3
             {
                 f = xn / 6;
                 sum = f;
-                int n = 0;
+                int n = 1;
                 while (n < 500)
                 {
-                    T = ((n + 1) * xn / ((4 * n + 1) * Pow(xn, 2)));
+                    T = ((n + 1) * xn / ((4 * n + 6) * Pow(n, 2)));
                     f *= T;
                     sum += f;
                     n++;
                 }
                 sxList.Add(sum);
                 xn += h;
-                xn = Round(xn, 3);
+                xn = Round(xn, 2);
             }
             return sxList;
         }
@@ -79,6 +79,7 @@ namespace Laba3
             xk = ConvertToDouble(textBox2.Text);
             int k = 12;
             double h = (xk - xn) / k;
+
             var YX = FunctionYx(xn, xk, h);
             var SX = FunctionSx(xn, xk, h);
 
@@ -92,7 +93,7 @@ namespace Laba3
                 + "--------------------------\n";
                 i++;
                 xn += h;
-                xn = Round(xn, 3);
+                xn = Round(xn, 2);
             }
             
         }

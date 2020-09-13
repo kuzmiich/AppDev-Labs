@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba3"
         mc:Ignorable="d"
-        Title="MainWindow" MaxHeight="500" MaxWidth="400" MinHeight="500" MinWidth="400">
+        Title="Лаб.раб. N3" MaxHeight="500" MaxWidth="400" MinHeight="500" MinWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -21,12 +21,6 @@
             <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="66,22,10,85"/>
             <Label Content="X2=" HorizontalAlignment="Left" Margin="32,61,0,43" Width="30"/>
             <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top" Margin="66,66,10,0"/>
-        </Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="129" Grid.Column="1">
-            <Label Content="N=" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="30" Height="26"/>
-            <TextBox x:Name="textBox3" TextWrapping="NoWrap" Height="20" Margin="66,22,10,84"/>
-            <Label Content="H=" HorizontalAlignment="Left" Margin="32,60,0,0" VerticalAlignment="Top" Width="30" Height="26"/>
-            <TextBox x:Name="textBox4" TextWrapping="NoWrap" Height="20" Margin="66,64,10,0" VerticalAlignment="Top"/>
         </Grid>
 
         <TextBox x:Name="outPanel" Margin="30,0,30,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="260" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2"/>
