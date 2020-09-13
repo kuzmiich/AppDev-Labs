@@ -15,14 +15,36 @@ using System.Windows.Shapes;
 
 namespace Laba6
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void InfoBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CreateBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void OpenBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SortBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SaveBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ExitBtnClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
