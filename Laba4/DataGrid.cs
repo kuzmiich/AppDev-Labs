@@ -1,7 +1,4 @@
-﻿namespace Laba4
+﻿class Grid
 {
-    public class Grid
-    {
-        public string Arr { get; set; }
-    }
+    public string Arr { get; set; }
 }
