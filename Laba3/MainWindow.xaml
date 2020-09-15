@@ -20,9 +20,9 @@
 
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="129" Grid.RowSpan="2">
             <Label Content="X1=" Width="35" Height="26" Margin="31,20,0,83" HorizontalAlignment="Left"/>
-            <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="66,22,10,85"/>
+            <TextBox x:Name="textBox1" TextWrapping="NoWrap" Height="20" Margin="66,22,10,85" Text="0.1"/>
             <Label Content="X2=" HorizontalAlignment="Left" Margin="31,60,0,43" Width="35" Height="26"/>
-            <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top" Margin="66,66,10,0"/>
+            <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top" Margin="66,66,10,0" Text="1"/>
         </Grid>
 
         <TextBox x:Name="outPanel" Margin="30,0,30,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="260" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2"/>

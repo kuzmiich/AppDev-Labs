@@ -33,7 +33,6 @@ namespace Laba1
             }
             catch (System.FormatException ex)
             {
-                Console.WriteLine("Error ", ex);
                 return 0;
             }
         }

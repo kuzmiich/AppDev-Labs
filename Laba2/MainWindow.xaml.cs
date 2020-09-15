@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 using static System.Math;
 namespace Laba2
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()

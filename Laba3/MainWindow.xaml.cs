@@ -74,12 +74,15 @@ namespace Laba3
         }
         private void MainBtnClick(object sender, RoutedEventArgs e)
         {
-            double xn, xk;
+            double xn = 0, xk = 0;
             xn = ConvertToDouble(textBox1.Text);
             xk = ConvertToDouble(textBox2.Text);
             int k = 12;
             double h = (xk - xn) / k;
-
+            if (h == 0)
+            {
+                h = 1;
+            }
             var YX = FunctionYx(xn, xk, h);
             var SX = FunctionSx(xn, xk, h);
 
@@ -95,7 +98,6 @@ namespace Laba3
                 xn += h;
                 xn = Round(xn, 2);
             }
-            
         }
     }
 }
