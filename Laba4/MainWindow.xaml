@@ -29,6 +29,6 @@
         <DataGrid x:Name="dataGrid1" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding myElements2}" Grid.Column="1"/>
         <DataGrid x:Name="dataGrid3" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding myElements3}" Grid.Column="2"/>
 
-        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="560"  Height="26" Grid.Row="2" Grid.ColumnSpan="3" Click="MainBtnClick"/>
+        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Height="26" Grid.Row="2" Grid.ColumnSpan="3" Click="MainBtnClick" Width="500"/>
     </Grid>
 </Window>

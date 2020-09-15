@@ -27,7 +27,7 @@
 
         <TextBox x:Name="outPanel" Margin="30,0,30,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="260" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2"/>
 
-        <Button Style="{Binding Button}" Content="ПУСК" Margin="0,10,0,20" Width="130"  Height="36" Grid.Row="2" Grid.ColumnSpan="2" Click="MainBtnClick"/>
+        <Button Content="ПУСК" Margin="0,10,0,20" Width="130"  Height="36" Grid.Row="2" Grid.ColumnSpan="2" Click="MainBtnClick"/>
     </Grid>
 
 </Window>

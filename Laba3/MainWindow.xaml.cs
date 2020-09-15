@@ -83,14 +83,14 @@ namespace Laba3
             var YX = FunctionYx(xn, xk, h);
             var SX = FunctionSx(xn, xk, h);
 
-            outPanel.Text = "|   x   |  S(x)  |  Y(x) |\n"
-                            + "---------------------------\n";
+            string line = "---------------------------\n";
+            outPanel.Text = "|   x   |  S(x)  |  Y(x) |\n" + line;
+
             int i = 0;
             while (xn <= xk)
             {
-                outPanel.Text += 
-                $"| {xn:F3} | {SX[i]:F3} | {YX[i]:F3} |\n"
-                + "--------------------------\n";
+                outPanel.Text +=
+                $"| {xn:F3} | {SX[i]:F3} | {YX[i]:F3} |\n" + line;
                 i++;
                 xn += h;
                 xn = Round(xn, 2);
