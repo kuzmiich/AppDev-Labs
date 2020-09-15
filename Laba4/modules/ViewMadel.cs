@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using DataGrid;
 
 namespace Laba4
 {
+    class Grid
+    {
+        public string Arr { get; set; }
+    }
     class ViewMadel
     {
         internal static double ConvertToDouble(string value)
@@ -24,15 +28,7 @@ namespace Laba4
             lhs = rhs;
             rhs = temp;
         }
-
-        /*public List<Grid> myElements { get; }
-
-        public void GridElement()
-        {
-            //DataGrid dataGrid = new DataGrid();
-            //dataGrid.Arr = "1";
-        }*/
-        private static void Gen(ref int[,] arr, int N, int M, Random rand)
+        public static void Gen(ref int[,] arr, int N, int M, Random rand)
         {
             int start = -100, end = 100;
             for (int i = 0; i < N; i++)
@@ -43,8 +39,7 @@ namespace Laba4
                 }
             }
         }
-
-        private static void SwapMaxAndMinStr(ref int[,] arr, int N, int M)
+        public static void SwapMaxAndMinStr(ref int[,] arr, int N, int M)
         {
             int max = arr[0, 0], min = arr[0, 0];
             int minIndStr = 0, maxIndStr = 0;
@@ -72,7 +67,6 @@ namespace Laba4
                 }
             }
         }
-
         public int[,] StringSwap(int N, int M)
         {
             Random rand = new Random();
@@ -85,6 +79,12 @@ namespace Laba4
             int[,] resultElements = arr;
 
             return resultElements;
+        }
+        public List<Grid> myElements { get; }
+        public static void GridElement()
+        {
+            Grid dataGrid = new Grid();
+            dataGrid.Arr = "1";
         }
     }
 }
