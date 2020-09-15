@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using DataGrid;
 
 namespace Laba4
 {
-    class Grid
-    {
-        public string Arr { get; set; }
-    }
     class ViewMadel
     {
         internal static double ConvertToDouble(string value)
@@ -81,10 +76,5 @@ namespace Laba4
             return resultElements;
         }
         public List<Grid> myElements { get; }
-        public static void GridElement()
-        {
-            Grid dataGrid = new Grid();
-            dataGrid.Arr = "1";
-        }
     }
 }

@@ -16,75 +16,25 @@ using static System.Math;
 
 namespace Laba3
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-        private double ConvertToDouble(string value)
-        {
-            try
-            {
-                return Convert.ToDouble(value);
-            }
-            catch (System.FormatException ex)
-            {
-                Console.WriteLine("Error ", ex);
-                return 0;
-            }
-        }
-        private List<double> FunctionYx(double xn, double xk, double h)
-        {
-            List<double> fList = new List<double>() { };
-            while (xn <= xk)
-            {
-                double yx = (1 / 4.0) * ((xn + 1) / Sqrt(xn) * Sinh(Sqrt(xn)) - Cosh(Sqrt(xn)));
-                fList.Add(yx);
-                xn += h;
-                xn = Round(xn, 2);
-            }
-            return fList;
-        }
-        private List<double> FunctionSx(double xn, double xk, double h)
-        {
-            List<double> sxList = new List<double>() { };
-
-            double f, T, sum;
-            while (xn <= xk)
-            {
-                f = xn / 6;
-                sum = f;
-                int n = 1;
-                while (n < 500)
-                {
-                    T = ((n + 1) * xn / ((4 * n + 6) * Pow(n, 2)));
-                    f *= T;
-                    sum += f;
-                    n++;
-                }
-                sxList.Add(sum);
-                xn += h;
-                xn = Round(xn, 2);
-            }
-            return sxList;
-        }
         private void MainBtnClick(object sender, RoutedEventArgs e)
         {
             double xn = 0, xk = 0;
-            xn = ConvertToDouble(textBox1.Text);
-            xk = ConvertToDouble(textBox2.Text);
+            xn = ViewModel.ConvertToDouble(textBox1.Text);
+            xk = ViewModel.ConvertToDouble(textBox2.Text);
             int k = 12;
             double h = (xk - xn) / k;
             if (h == 0)
             {
                 h = 1;
             }
-            var YX = FunctionYx(xn, xk, h);
-            var SX = FunctionSx(xn, xk, h);
+            var YX = ViewModel.FunctionYx(xn, xk, h);
+            var SX = ViewModel.FunctionSx(xn, xk, h);
 
             string line = "---------------------------\n";
             outPanel.Text = "|   x   |  S(x)  |  Y(x) |\n" + line;

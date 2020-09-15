@@ -11,9 +11,8 @@ namespace Laba2
             {
                 return Convert.ToDouble(value);
             }
-            catch (System.FormatException ex)
+            catch (System.FormatException)
             {
-                Console.WriteLine("Error ", ex);
                 return 0;
             }
         }
