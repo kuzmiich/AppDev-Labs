@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Math;
+
 namespace Laba2
 {
     public partial class MainWindow : Window
@@ -21,41 +22,11 @@ namespace Laba2
         {
             InitializeComponent();
         }
-        private double ConvertToDouble(string value)
-        {
-            try
-            {
-                return Convert.ToDouble(value);
-            }
-            catch (System.FormatException ex)
-            {
-                Console.WriteLine("Error ", ex);
-                return 0;
-            }
-        }
-        private double Q(double fx, double x, double y, double z)
-        {
-            return Max(fx + y + z, x * y * z) / Min(fx + y + z, x * y * z);
-        }
-        private double FindMaxAbs(double fx, double x, double y, double z)
-        {
-            int count = 4;
-            double max = 0;
-            double[] arr = new double[] { fx, x, y, z };
-            for (int i = 0; i < count; i++)
-            {
-                if (Abs(arr[i]) > max)
-                {
-                    max = Abs(arr[i]);
-                }
-            }
-            return max;
-        }
         private void MainBtn_Click(object sender, RoutedEventArgs e)
         {
-            double x = ConvertToDouble(textBox1.Text);
-            double y = ConvertToDouble(textBox2.Text);
-            double z = ConvertToDouble(textBox3.Text);
+            double x = ViewModel.ConvertToDouble(textBox1.Text);
+            double y = ViewModel.ConvertToDouble(textBox2.Text);
+            double z = ViewModel.ConvertToDouble(textBox3.Text);
             double fx = Cos(x);
             if (checkBox1.IsChecked == true)
             {
@@ -72,9 +43,9 @@ namespace Laba2
             double maxAbs = 0;
             if (MaxAbs.IsChecked == true)
             {
-                maxAbs = FindMaxAbs(fx, x, y, z);
+                maxAbs = ViewModel.FindMaxAbs(fx, x, y, z);
             }
-            double result = Q(fx, x, y, z);
+            double result = ViewModel.Q(fx, x, y, z);
             outPanel.Text = "max(f(x)+y+z, x*y*z) / min(f(x)+y+z, x*y*z)\n"
                 + $"X = { x }\n"
                 + $"Y = { y }\n"

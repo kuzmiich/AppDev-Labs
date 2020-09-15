@@ -24,6 +24,8 @@ namespace Laba1
         public MainWindow()
         {
             InitializeComponent();
+            Title = "123";
+            textBox2.Text = Convert.ToString(20);
         }
         private double ConvertToDouble(string value)
         {
@@ -33,6 +35,7 @@ namespace Laba1
             }
             catch (System.FormatException ex)
             {
+                Console.WriteLine("Error, ", ex);
                 return 0;
             }
         }
@@ -47,11 +50,16 @@ namespace Laba1
             double z = ConvertToDouble(textBox3.Text);
 
             double result = Calculate(x, y, z);
-            OutPanel.Text = "g = (y^(x+1) / (|x-y|^(1/3) + 3)) + ((x + y/2) / 2*|x+y|(x+1)^(-1/sin(z)))\n"
+            OutPanel.Text = "g = (y^(x+1) / (|x-y|^(1/3) + 3)) + ((x + y/2) / 2*|x+y|(x+1)^(-1/sin(z)))"
                 + $"X = { x }\n"
                 + $"Y = { y }\n"
                 + $"Z = { z }\n"
-                + $"Результат = { Round(result, 2) }";
+                + $"Результат = { Round(result, 4) }";
+        }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
