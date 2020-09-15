@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba3"
         mc:Ignorable="d"
-        Title="Лаб.раб. N3" MaxHeight="500" MaxWidth="400" MinHeight="500" MinWidth="400">
-    <Grid>
+        Title="Лаб.раб. N3"
+        MaxHeight="500" MaxWidth="400" MinHeight="500" MinWidth="400">
+    <Grid Style="{StaticResource DefaultView}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -16,16 +17,17 @@
             <RowDefinition Height="350*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="129">
-            <Label Content="X1=" Width="30" Height="26" Margin="32,18,0,85" HorizontalAlignment="Left"/>
+
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="129" Grid.RowSpan="2">
+            <Label Content="X1=" Width="35" Height="26" Margin="31,20,0,83" HorizontalAlignment="Left"/>
             <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="66,22,10,85"/>
-            <Label Content="X2=" HorizontalAlignment="Left" Margin="32,61,0,43" Width="30"/>
+            <Label Content="X2=" HorizontalAlignment="Left" Margin="31,60,0,43" Width="35" Height="26"/>
             <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top" Margin="66,66,10,0"/>
         </Grid>
 
         <TextBox x:Name="outPanel" Margin="30,0,30,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="260" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2"/>
 
-        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,20" Width="120"  Height="30" Grid.Row="2" Grid.ColumnSpan="2" Click="MainBtnClick" />
+        <Button Style="{Binding Button}" Content="ПУСК" Margin="0,10,0,20" Width="130"  Height="36" Grid.Row="2" Grid.ColumnSpan="2" Click="MainBtnClick"/>
     </Grid>
 
 </Window>

@@ -16,6 +16,14 @@
             <RowDefinition Height="240*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="DodgerBlue" Offset="0"></GradientStop>
+                    <GradientStop Color="CadetBlue" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="129">
             <Label Content="X =" Width="30" Height="26" Margin="31,18,0,85" HorizontalAlignment="Left"/>
             <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="66,22,10,85"/>
@@ -35,6 +43,6 @@
         </GroupBox>
         <TextBox x:Name="outPanel" Margin="30,0,30,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="232" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2"/>
 
-        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,20" Width="120"  Height="30" Grid.Row="2" Grid.ColumnSpan="2" Click="MainBtn_Click" />
+        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,20" Width="140"  Height="40" Grid.Row="2" Grid.ColumnSpan="2" Click="MainBtn_Click" />
     </Grid>
 </Window>
