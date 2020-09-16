@@ -26,6 +26,10 @@ namespace Laba4
         {
             
         }
-    }
 
+        private void dataGrid2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+    }
 }

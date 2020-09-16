@@ -2,28 +2,31 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:Laba4">
     <Style x:Key="DefaultView">
-            <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
-            <Setter Property="Control.FontSize" Value="13"/>
-            <Setter Property="Control.Background">
-                <Setter.Value>
-                    <LinearGradientBrush>
-                        <LinearGradientBrush.GradientStops>
-                            <GradientStop Color="DodgerBlue" Offset="0"/>
-                            <GradientStop Color="CadetBlue" Offset="1"/>
-                        </LinearGradientBrush.GradientStops>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    <Style TargetType="Button">
+        <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+        <Setter Property="Control.FontSize" Value="13"/>
+        <Setter Property="Control.Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="DodgerBlue" Offset="0"/>
+                        <GradientStop Color="CadetBlue" Offset="1"/>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ButtonCircle" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="20"
-                                Background="{TemplateBinding Background}">
-
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="20" 
+                          BorderThickness="4" 
+                          Background="DarkRed"  
+                          BorderBrush="Aqua"
+                          RenderTransformOrigin="0.5,0.5">
+                            <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
