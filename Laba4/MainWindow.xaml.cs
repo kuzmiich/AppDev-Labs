@@ -25,17 +25,22 @@ namespace Laba4
             }
         }
 
-
+        List<int[,]> elements = new List<int[,]>();
         private void MainBtnClick(object sender, RoutedEventArgs e)
         {
             int N = ConvertToInt(textBox1.Text);
             int M = ConvertToInt(textBox2.Text);
-            var arr = ViewMadel.StringSwap(N, M);
-            List<int[,]> elements = new List<int[,]> ();
 
+            var arr = ViewModel.StringSwap(N, M);
             elements.Add(arr);
             dGrid.ItemsSource = elements;
             dGrid.Items.Refresh();
+        }
+
+        private void EnableEdit(object sender, RoutedEventArgs e)
+        {
+            textBox1.IsEnabled = ViewModel.TargetChange(textBox1.IsEnabled);
+            textBox2.IsEnabled = ViewModel.TargetChange(textBox1.IsEnabled);
         }
     }
 }

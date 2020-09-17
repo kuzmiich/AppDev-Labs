@@ -1,10 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Laba4
 {
-    class ViewMadel
+    class ViewModel
     {
+
+        public static bool TargetChange(bool value)
+        {
+            return value ? value = false : value = true;
+        }
         private static void Swap<T>(ref T lhs, ref T rhs)
         {
             T temp = lhs;
