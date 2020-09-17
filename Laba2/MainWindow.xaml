@@ -5,18 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba2"
         mc:Ignorable="d"
-        Title="Лаб.раб. N2" MaxHeight="500" MaxWidth="400" MinHeight="500" MinWidth="400">
+        Height="500" 
+        Width="400"
+        Title="Лаб.раб. N2" MaxHeight="800" MaxWidth="1000" MinHeight="500" MinWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="162*"/>
+            <ColumnDefinition Width="23*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="124*"/>
             <RowDefinition Height="240*"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto" MinHeight="60"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3">
+        <Rectangle Grid.ColumnSpan="3" Grid.RowSpan="3">
             <Rectangle.Fill>
                 <LinearGradientBrush>
                     <GradientStop Color="DodgerBlue" Offset="0"></GradientStop>
@@ -24,25 +27,25 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="129">
-            <Label Content="X =" Width="30" Height="26" Margin="31,18,0,85" HorizontalAlignment="Left"/>
-            <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="66,22,10,85" Text="1"/>
-            <Label Content="Y =" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Center" Width="30" Height="26"/>
-            <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top"  Margin="66,57,10,0" Text="1"/>
-            <Label Content="Z =" HorizontalAlignment="Left" Margin="31,87,0,0" VerticalAlignment="Top" Width="30" Height="26"/>
-            <TextBox x:Name="textBox3" TextWrapping="NoWrap" Height="20" Margin="66,91,10,16" Text="1"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Width="180" Height="129" Grid.Column="1" Margin="30,0,0,0">
+            <Label Content="X =" Width="30" Height="26" Margin="0,18,0,85" HorizontalAlignment="Left"/>
+            <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" Margin="30,22,10,85" Text="1"/>
+            <Label Content="Y =" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Width="30" Height="26"/>
+            <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" VerticalAlignment="Top"  Margin="30,57,10,0" Text="1"/>
+            <Label Content="Z =" HorizontalAlignment="Left" Margin="0,87,0,0" VerticalAlignment="Top" Width="30" Height="26"/>
+            <TextBox x:Name="textBox3" TextWrapping="NoWrap" Height="20" Margin="30,91,10,16" Text="1"/>
         </Grid>
 
-        <CheckBox x:Name="MaxAbs" Grid.Column="1" Content="MaxAbs"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Margin="75,4,0,0"/>
-        <GroupBox Header="U(x)" BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Margin="34,22,21,21">
+        <CheckBox x:Name="MaxAbs" Content="MaxAbs"  HorizontalAlignment="Left" Grid.Column="1" VerticalAlignment="Top" Height="18" Margin="232,4,0,0" Width="62"/>
+        <GroupBox Header="U(x)" BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Margin="210,22,9,22">
             <StackPanel Margin="-1,-1,1,-1">
                 <RadioButton GroupName="MathRadioButtons" x:Name="checkBox1" Content="Cos(x)" Margin="0,6,0,10" IsChecked="True"/>
                 <RadioButton GroupName="MathRadioButtons" x:Name="checkBox2" Content="Sin(x)" Margin="0,0,0,10"/>
                 <RadioButton GroupName="MathRadioButtons" x:Name="checkBox3" Content="Tg(x)" Margin="0,0,0,10"/>
             </StackPanel>
         </GroupBox>
-        <TextBox x:Name="outPanel" Margin="30,0,30,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="232" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible" UseLayoutRounding="False" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Visible" TextChanged="outPanel_TextChanged"/>
+        <TextBox x:Name="outPanel" MaxWidth="800" TextWrapping="Wrap" VerticalAlignment="Center" Height="266" IsReadOnly="True" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True"/>
 
-        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,20" Width="140"  Height="40" Grid.Row="2" Grid.ColumnSpan="2" Click="MainBtn_Click" />
+        <Button Content="ПУСК" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" Width="140"  Height="40" Grid.Row="2" Click="MainBtn_Click" Grid.Column="1" />
     </Grid>
 </Window>
