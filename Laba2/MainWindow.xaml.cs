@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using static System.Math;
 
 namespace Laba2
@@ -22,11 +10,23 @@ namespace Laba2
         {
             InitializeComponent();
         }
+        private double ConvertToDouble(string value)
+        {
+            try
+            {
+                return Convert.ToDouble(value);
+            }
+            catch (System.FormatException ex)
+            {
+                MessageBox.Show("Error, ", Convert.ToString(ex));
+                return 0;
+            }
+        }
         private void MainBtn_Click(object sender, RoutedEventArgs e)
         {
-            double x = ViewModel.ConvertToDouble(textBox1.Text);
-            double y = ViewModel.ConvertToDouble(textBox2.Text);
-            double z = ViewModel.ConvertToDouble(textBox3.Text);
+            double x = ConvertToDouble(textBox1.Text);
+            double y = ConvertToDouble(textBox2.Text);
+            double z = ConvertToDouble(textBox3.Text);
             double fx = Cos(x);
             if (checkBox1.IsChecked == true)
             {

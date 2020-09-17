@@ -1,21 +1,9 @@
-﻿using System;
-using static System.Math;
+﻿using static System.Math;
 
 namespace Laba2
 {
     class ViewModel
     {
-        public static double ConvertToDouble(string value)
-        {
-            try
-            {
-                return Convert.ToDouble(value);
-            }
-            catch (System.FormatException)
-            {
-                return 0;
-            }
-        }
         public static double Q(double fx, double x, double y, double z)
         {
             return Max(fx + y + z, x * y * z) / Min(fx + y + z, x * y * z);

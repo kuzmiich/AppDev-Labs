@@ -16,7 +16,6 @@ namespace Laba4
                 return 0;
             }
         }
-
         internal int CountWords(string str)
         {
             int count = 0;

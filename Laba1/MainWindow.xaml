@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Laba1"
         mc:Ignorable="d"
         Title="Лаб. работа N1  Ст.гр. 10701219 Кузьмича И.В." MinHeight="460" MinWidth="360" Height="460" Width="360">
-    <Grid x:Name="grid1" Margin="0,0,0,0">
+    <Grid>
         <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3">
             <Rectangle.Fill>
                 <LinearGradientBrush>

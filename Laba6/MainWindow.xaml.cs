@@ -25,7 +25,6 @@ namespace Laba6
         {
 
         }
-
         private void CreateBtnClick(object sender, RoutedEventArgs e)
         {
 

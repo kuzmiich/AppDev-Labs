@@ -7,17 +7,6 @@ namespace Laba3
 {
     class ViewModel
     {
-        public static double ConvertToDouble(string value)
-        {
-            try
-            {
-                return Convert.ToDouble(value);
-            }
-            catch (System.FormatException)
-            {
-                return 0;
-            }
-        }
         public static List<double> FunctionYx(double xn, double xk, double h)
         {
             List<double> fList = new List<double>() { };

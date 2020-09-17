@@ -5,18 +5,6 @@ namespace Laba4
 {
     class ViewMadel
     {
-        internal static double ConvertToDouble(string value)
-        {
-            try
-            {
-                return Convert.ToDouble(value);
-            }
-            catch (System.FormatException ex)
-            {
-                Console.WriteLine("Error ", ex);
-                return 0;
-            }
-        }
         private static void Swap<T>(ref T lhs, ref T rhs)
         {
             T temp = lhs;
