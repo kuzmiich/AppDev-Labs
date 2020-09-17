@@ -18,7 +18,7 @@ namespace Laba2
             }
             catch (System.FormatException ex)
             {
-                MessageBox.Show("Error, ", Convert.ToString(ex));
+                MessageBox.Show( Convert.ToString(ex) );
                 return 0;
             }
         }

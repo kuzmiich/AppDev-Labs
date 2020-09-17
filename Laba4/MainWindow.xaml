@@ -28,7 +28,7 @@
             </Grid>
             <Button HorizontalAlignment="Right" Content="Изменить размерность массива" Margin="0,11,0,0" Width="auto" Height="23"/>
         </Grid>
-        <DataGrid x:Name="dataGrid2" Grid.Row="1" ItemsSource="{Binding myElements1}" Grid.Column="1" SelectionChanged="dataGrid2_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Height="336" Width="478"/>
+        <DataGrid x:Name="dGrid" Grid.Row="1" ItemsSource="{Binding Elements}" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="336" Width="478"/>
 
         <Button Style="{StaticResource ButtonCircle}" Foreground="Snow" Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40" Click="MainBtnClick" Width="180" Margin="13,0,0,0" Grid.Column="1" Grid.Row="2" />
     </Grid>

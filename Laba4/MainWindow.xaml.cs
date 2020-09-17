@@ -20,19 +20,22 @@ namespace Laba4
             }
             catch (System.FormatException ex)
             {
-                MessageBox.Show("Error, ", Convert.ToString(ex) );
+                MessageBox.Show( Convert.ToString(ex) );
                 return 0;
             }
         }
 
-        public List<Grid> myElements { get; }
 
         private void MainBtnClick(object sender, RoutedEventArgs e)
         {
             int N = ConvertToInt(textBox1.Text);
             int M = ConvertToInt(textBox2.Text);
-            ViewMadel.StringSwap(N, M);
+            var arr = ViewMadel.StringSwap(N, M);
+            List<int[,]> elements = new List<int[,]> ();
 
+            elements.Add(arr);
+            dGrid.ItemsSource = elements;
+            dGrid.Items.Refresh();
         }
     }
 }
