@@ -11,7 +11,7 @@ namespace Laba4
             lhs = rhs;
             rhs = temp;
         }
-        public static void Gen(ref int[,] arr, int N, int M, Random rand)
+        private static void Gen(ref int[,] arr, int N, int M, Random rand)
         {
             int start = -100, end = 100;
             for (int i = 0; i < N; i++)
@@ -22,7 +22,7 @@ namespace Laba4
                 }
             }
         }
-        public static void SwapMaxAndMinStr(ref int[,] arr, int N, int M)
+        private static void SwapMaxAndMinStr(ref int[,] arr, int N, int M)
         {
             int max = arr[0, 0], min = arr[0, 0];
             int minIndStr = 0, maxIndStr = 0;
@@ -50,19 +50,18 @@ namespace Laba4
                 }
             }
         }
-        public int[,] StringSwap(int N, int M)
+        public static int[,] StringSwap(int N, int M)
         {
             Random rand = new Random();
             int[,] arr = new int[N, M];
             Gen(ref arr, N, M, rand);
 
-            int[,] sourseElements = arr;
+            int[,] sourseArr = arr;
 
             SwapMaxAndMinStr(ref arr, N, M);
-            int[,] resultElements = arr;
+            int[,] resultArr = arr;
 
-            return resultElements;
+            return resultArr;
         }
-        public List<Grid> myElements { get; }
     }
 }

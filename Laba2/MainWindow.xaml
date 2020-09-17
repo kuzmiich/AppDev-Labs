@@ -10,8 +10,8 @@
         Title="Лаб.раб. N2" MaxHeight="800" MaxWidth="1000" MinHeight="500" MinWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="162*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="155*"/>
             <ColumnDefinition Width="23*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -46,6 +46,6 @@
         </GroupBox>
         <TextBox x:Name="outPanel" MaxWidth="800" TextWrapping="Wrap" VerticalAlignment="Center" Height="266" IsReadOnly="True" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True"/>
 
-        <Button Content="ПУСК" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" Width="140"  Height="40" Grid.Row="2" Click="MainBtn_Click" Grid.Column="1" />
+        <Button Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140"  Height="40" Grid.Row="2" Click="MainBtn_Click" Grid.Column="1" />
     </Grid>
 </Window>
