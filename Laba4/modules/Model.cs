@@ -2,7 +2,7 @@
 
 namespace Laba4
 {
-    class ViewModel
+    class Model
     {
 
         public static bool TargetChange(bool value)

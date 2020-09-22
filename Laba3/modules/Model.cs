@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using static System.Math;
 
 namespace Laba3
 {
-    class ViewModel
+    class Model
     {
         public static List<double> FunctionYx(double xn, double xk, double h)
         {
@@ -24,12 +22,13 @@ namespace Laba3
             List<double> sxList = new List<double>() { };
 
             double f, T, sum;
+            int k = 500;
             while (xn <= xk)
             {
                 f = xn / 6;
                 sum = f;
                 int n = 1;
-                while (n < 500)
+                while (n < k)
                 {
                     T = ((n + 1) * xn / ((4 * n + 6) * Pow(n, 2)));
                     f *= T;

@@ -31,16 +31,17 @@ namespace Laba4
             int N = ConvertToInt(textBox1.Text);
             int M = ConvertToInt(textBox2.Text);
 
-            var arr = ViewModel.StringSwap(N, M);
-            elements.Add(arr);
-            dGrid.ItemsSource = elements;
+            int[,] arr = Model.StringSwap(N, M);
+            
+            dGrid.ItemsSource = arr;
+            
             dGrid.Items.Refresh();
         }
 
         private void EnableEdit(object sender, RoutedEventArgs e)
         {
-            textBox1.IsEnabled = ViewModel.TargetChange(textBox1.IsEnabled);
-            textBox2.IsEnabled = ViewModel.TargetChange(textBox1.IsEnabled);
+            textBox1.IsEnabled = Model.TargetChange(textBox1.IsEnabled);
+            textBox2.IsEnabled = Model.TargetChange(textBox2.IsEnabled);
         }
     }
 }

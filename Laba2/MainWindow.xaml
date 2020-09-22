@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Height="500" 
         Width="400"
-        Title="Лаб.раб. N2" MaxHeight="800" MaxWidth="1000" MinHeight="500" MinWidth="400">
+        Title="Лаб.раб. N2"
+        MaxHeight="800" MaxWidth="1000"
+        MinHeight="500" MinWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="23*"/>

@@ -33,8 +33,8 @@ namespace Laba3
             {
                 h = 1;
             }
-            var YX = ViewModel.FunctionYx(xn, xk, h);
-            var SX = ViewModel.FunctionSx(xn, xk, h);
+            var YX = Model.FunctionYx(xn, xk, h);
+            var SX = Model.FunctionSx(xn, xk, h);
 
             string line = "---------------------------\n";
             outPanel.Text = "|   x   |  S(x)  |  Y(x) |\n" + line;

@@ -2,7 +2,7 @@
 
 namespace Laba2
 {
-    class ViewModel
+    class Model
     {
         public static double Q(double fx, double x, double y, double z)
         {

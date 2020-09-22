@@ -43,9 +43,9 @@ namespace Laba2
             double maxAbs = 0;
             if (MaxAbs.IsChecked == true)
             {
-                maxAbs = ViewModel.FindMaxAbs(fx, x, y, z);
+                maxAbs = Model.FindMaxAbs(fx, x, y, z);
             }
-            double result = ViewModel.Q(fx, x, y, z);
+            double result = Model.Q(fx, x, y, z);
             outPanel.Text += "max(f(x)+y+z, x*y*z) / min(f(x)+y+z, x*y*z)\n"
                 + $"X = { x }\n"
                 + $"Y = { y }\n"
