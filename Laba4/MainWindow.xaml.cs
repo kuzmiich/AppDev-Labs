@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -24,24 +25,23 @@ namespace Laba4
                 return 0;
             }
         }
-
-        List<int[,]> elements = new List<int[,]>();
         private void MainBtnClick(object sender, RoutedEventArgs e)
         {
             int N = ConvertToInt(textBox1.Text);
             int M = ConvertToInt(textBox2.Text);
 
-            int[,] arr = Model.StringSwap(N, M);
-            
-            dGrid.ItemsSource = arr;
-            
+            dGrid.ItemsSource = Model.Gen(N, M);
+            /*dGrid.FormA();
+            var data = new double[N, M];
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < M; j++)
+                {
+                    data[i, j] = dGrid.Items[i, j];
+                }
+            }
+            dGrid.ItemsSource = data.AsTupleList();*/
             dGrid.Items.Refresh();
-        }
-
-        private void EnableEdit(object sender, RoutedEventArgs e)
-        {
-            textBox1.IsEnabled = Model.TargetChange(textBox1.IsEnabled);
-            textBox2.IsEnabled = Model.TargetChange(textBox2.IsEnabled);
         }
     }
 }

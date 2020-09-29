@@ -6,5 +6,12 @@ namespace Laba5.modules
 {
     class Model
     {
+        private string numStrNumPos(string str)
+        {
+            string[] words = str.Split();
+            
+            return "";
+        }
+            
     }
 }

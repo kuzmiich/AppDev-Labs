@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="Лаб. работа N1  Ст.гр. 10701219 Кузьмича И.В." MinHeight="460" MinWidth="360" Height="460" Width="360">
     <Grid>
-        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.ColumnSpan="3" Grid.RowSpan="3">
             <Rectangle.Fill>
                 <LinearGradientBrush>
                     <GradientStop Color="DodgerBlue" Offset="0"/>
@@ -15,7 +21,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid HorizontalAlignment="Center" Height="184" VerticalAlignment="Top" Width="369">
+        <Grid Grid.Column="1" HorizontalAlignment="Center" Height="184" VerticalAlignment="Top" Width="369">
             <Label x:Name="label1" Content="Введите значение x" HorizontalAlignment="Left" Margin="44,14,0,0" VerticalAlignment="Top" FontSize="14"/>
             <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="195,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="1"/>
 
@@ -27,8 +33,8 @@
 
             <Label x:Name="label" Content="Результат выполнения программы:" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Bottom" Width="210"/>
         </Grid>
-        <TextBox x:Name="OutPanel" Height="160" VerticalAlignment="Top" Margin="35,189,35,0" IsReadOnly="True" TextWrapping="Wrap"/>
+        <TextBox Grid.Column="1" x:Name="OutPanel" Height="160" VerticalAlignment="Top" Margin="35,189,35,0" IsReadOnly="True" TextWrapping="Wrap"/>
         
-        <Button Content="Выполнить" Margin="100,372,100,0" VerticalAlignment="Top" Click="Button_Click" Height="34"/>
+        <Button Grid.Column="1" Content="Выполнить" Margin="100,372,100,0" VerticalAlignment="Top" Click="Button_Click" Height="34"/>
     </Grid>
 </Window>

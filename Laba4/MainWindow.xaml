@@ -21,15 +21,41 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.ColumnSpan="2" Grid.Column="0" VerticalAlignment="Center" Height="88">
-            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="263" Height="40" Margin="34,26,0,0">
-                <Label Content="Размерность массива" Width="138" Height="26" Margin="0,7,0,7" HorizontalAlignment="Left"/>
-                <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" HorizontalAlignment="Right" Width="50" Margin="0,13,10,7" Text="5" TextAlignment="Center" IsEnabled="False"/>
-                <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" HorizontalAlignment="Right" Width="50" Margin="0,13,65,7" Text="5" TextAlignment="Center" IsEnabled="False"/>
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="40" Margin="34,26,0,0">
+                <Label Content="Размерность массива"  FontSize="14" Width="137" Height="26" Margin="0,7,0,7" HorizontalAlignment="Left"/>
+                <TextBox x:Name="textBox1"  TextWrapping="NoWrap" Height="20" HorizontalAlignment="Right" Width="50" Margin="0,13,0,7" Text="5" TextAlignment="Center"/>
+                <TextBox x:Name="textBox2"  TextWrapping="NoWrap" Height="20" HorizontalAlignment="Right" Width="50" Margin="0,13,53,7" Text="5" TextAlignment="Center"/>
             </Grid>
-            <Button HorizontalAlignment="Right" Content="Изменить размерность массива" Margin="0,11,0,0" Width="auto" Height="23" Click="EnableEdit"/>
+            <Button Style="{StaticResource ButtonCircle}" HorizontalAlignment="Right" Content="Изменить размерность массива" Margin="0,38,0,27" Width="204" Height="23" Foreground="Snow"/>
         </Grid>
-        <DataGrid x:Name="dGrid" Grid.Row="1" ItemsSource="{Binding Elements}" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="336" Width="478"/>
+        <DataGrid x:Name="dGrid" Grid.Row="1" ItemsSource="{Binding Elements}" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="336" Width="478">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Company Name" Binding="{Binding CompanyName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Contact First Name" Binding="{Binding FirstName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Contact Last Name" Binding="{Binding LastName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="0" Background="BlanchedAlmond" Padding="10">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="12" Text="Email: " VerticalAlignment="Center" />
+                                <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding EmailAddress}" VerticalAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="12" Text="Phone: " VerticalAlignment="Center" />
+                                <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding Phone}" VerticalAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="12" Text="Sales Person: " VerticalAlignment="Center" />
+                                <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding SalesPerson}" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
 
-        <Button Style="{StaticResource ButtonCircle}" Foreground="Snow" Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40" Click="MainBtnClick" Width="180" Margin="13,0,0,0" Grid.Column="1" Grid.Row="2" />
+        <Button Style="{StaticResource ButtonCircleCenter}" Foreground="Snow" Content="ПУСК" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40" Click="MainBtnClick" Width="180" Grid.Column="1" Grid.Row="2" FontWeight="SemiBold" />
     </Grid>
 </Window>

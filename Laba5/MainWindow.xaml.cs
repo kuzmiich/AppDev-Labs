@@ -22,23 +22,35 @@ namespace Laba5
         {
             InitializeComponent();
         }
-
+        private static double ConvertToDouble(string value)
+        {
+            try
+            {
+                return Convert.ToDouble(value);
+            }
+            catch (System.FormatException ex)
+            {
+                Console.WriteLine("Error ", ex);
+                return 0;
+            }
+        }
         private void ComboBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            comboBox.Text = "hi";
         }
-        /*private void ExitBtnClick(object sender, CancelEventArgs e)
+
+        private void ExitBtnClick(object sender, RoutedEventArgs e)
         {
             var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
                                            MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
             if (response == MessageBoxResult.No)
             {
-                e.Cancel = true;
+                e.Handled = true;
             }
             else
             {
                 Application.Current.Shutdown();
             }
-        }*/
+        }
     }
 }

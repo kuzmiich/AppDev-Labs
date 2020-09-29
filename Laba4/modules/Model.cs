@@ -26,6 +26,20 @@ namespace Laba4
                 }
             }
         }
+        public static int[,] Gen(int N, int M)
+        {
+            Random rand = new Random();
+            int[,] arr = new int[N, M];
+            int start = -100, end = 100;
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < M; j++)
+                {
+                    arr[i, j] = start + rand.Next(start, end);
+                }
+            }
+            return arr;
+        }
         private static void SwapMaxAndMinStr(ref int[,] arr, int N, int M)
         {
             int max = arr[0, 0], min = arr[0, 0];

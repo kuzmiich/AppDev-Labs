@@ -13,7 +13,7 @@ namespace Laba3
                 double yx = (1 / 4.0) * ((xn + 1) / Sqrt(xn) * Sinh(Sqrt(xn)) - Cosh(Sqrt(xn)));
                 fList.Add(yx);
                 xn += h;
-                xn = Round(xn, 2);
+                xn = Round(xn, 6);
             }
             return fList;
         }
@@ -22,7 +22,7 @@ namespace Laba3
             List<double> sxList = new List<double>() { };
 
             double f, T, sum;
-            int k = 500;
+            int k = 2;
             while (xn <= xk)
             {
                 f = xn / 6;
@@ -37,7 +37,7 @@ namespace Laba3
                 }
                 sxList.Add(sum);
                 xn += h;
-                xn = Round(xn, 2);
+                xn = Round(xn, 6);
             }
             return sxList;
         }

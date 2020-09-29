@@ -43,10 +43,10 @@ namespace Laba3
             while (xn <= xk)
             {
                 outPanel.Text +=
-                $"| {xn:F3} | {SX[i]:F3} | {YX[i]:F3} |\n" + line;
+                $"| {xn:F3} | {SX[i]:F6} | {YX[i]:F6} |\n" + line;
                 i++;
                 xn += h;
-                xn = Round(xn, 2);
+                xn = Round(xn, 6);
             }
         }
     }

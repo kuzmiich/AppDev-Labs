@@ -12,12 +12,11 @@
             <RowDefinition Height="240*"/>
             <RowDefinition Height="44*"/>
         </Grid.RowDefinitions>
-
         <Label Content="Введите строки:" FontWeight="SemiBold" FontSize="16" Width="146" Margin="30,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="31"/>
 
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" Width="448" Height="30" Grid.Row="1"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" Width="432" Height="30" Grid.Row="1"/>
         <TextBox x:Name="outPanel" Margin="26,33,26,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="248" IsReadOnly="True" Grid.Row="1"/>
 
-        <Button Content="Выход" FontWeight="SemiBold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Width="160" Height="35" Grid.Row="3"/>
+        <Button Content="Выход" FontWeight="SemiBold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Width="160" Height="35" Grid.Row="3" Click="ExitBtnClick"/>
     </Grid>
 </Window>

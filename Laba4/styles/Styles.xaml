@@ -4,25 +4,16 @@
     <Style x:Key="DefaultView">
         <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
         <Setter Property="Control.FontSize" Value="13"/>
-        <Setter Property="Control.Background">
-            <Setter.Value>
-                <LinearGradientBrush>
-                    <LinearGradientBrush.GradientStops>
-                        <GradientStop Color="DodgerBlue" Offset="0"/>
-                        <GradientStop Color="CadetBlue" Offset="1"/>
-                    </LinearGradientBrush.GradientStops>
-                </LinearGradientBrush>
-            </Setter.Value>
-        </Setter>
+        <Setter Property="Control.FontFamily" Value="Camel"/>
+        
     </Style>
-    <Style x:Key="ButtonCircle" TargetType="{x:Type Button}">
+    <Style x:Key="ButtonCircleCenter" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border CornerRadius="20"
                           BorderThickness="2"  
-                          BorderBrush="CadetBlue"
-                          Background="CornflowerBlue"
+                          Background="#F03226"
                           RenderTransformOrigin="0.5,0.5">
                             <ContentPresenter x:Name="ButtonContentPresenter"
                                 VerticalAlignment="Center"  
@@ -31,5 +22,23 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    <Style x:Key="ButtonCircle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="5"
+                              Background="#F03226"
+                              
+                              BorderThickness="2"
+                              RenderTransformOrigin="0.5,0.5">
+                        <ContentPresenter x:Name="ButtonContentPresenter"
+                                    VerticalAlignment="Center"  
+                                    HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
     </Style>
 </ResourceDictionary>

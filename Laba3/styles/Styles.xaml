@@ -4,6 +4,7 @@
     <Style x:Key="DefaultView">
         <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
         <Setter Property="Control.FontSize" Value="14"/>
+        <Setter Property="Control.FontFamily" Value="Camel"/>
         <Setter Property="Control.Background">
             <Setter.Value>
                 <LinearGradientBrush>
