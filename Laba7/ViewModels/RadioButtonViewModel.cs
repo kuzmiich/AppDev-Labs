@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace Laba7.ViewModels
 {
@@ -24,7 +21,7 @@ namespace Laba7.ViewModels
         }
         public string GetContentText 
         {
-            get {return _contentText; }
+            get { return _contentText; }
             set 
             { 
                 _contentText = value;

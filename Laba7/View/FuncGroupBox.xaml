@@ -17,12 +17,12 @@
             Header="U(x)" 
             Margin="5, 0, 5, 10" 
             Grid.Column="0" 
-            Grid.Row="0" 
+            Grid.Row="0" BorderBrush="#FF0F9EF3" 
             >
             <ListView x:Name="ListViewRadio">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <RadioButton  Checked="RadioButton_Checked" Margin="3"  
+                        <RadioButton Checked="RadioButton_Checked" Margin="3"  
                                      IsChecked="{Binding Path=IsFuncChecked}"
                                      Content="{Binding Path=GetContentText}" 
                                      GroupName="{Binding Path=GetGroupName}"/>

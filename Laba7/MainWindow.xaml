@@ -20,26 +20,30 @@
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <local1:FuncGroupBox x:Name="MathFuncGroup" Margin="5" Grid.Column="2" Grid.RowSpan="2"/>
+            <local1:FuncGroupBox x:Name="MathFuncGroup" Margin="5" Grid.Column="2" Grid.RowSpan="2" />
             <Label Content="X1:" 
                VerticalAlignment="Center" 
                Grid.Row="0" 
                Grid.Column="0" 
                FontSize="14" 
                FontFamily="Calibri"/>
-            <TextBox x:Name="GetX1_Input" Style="{StaticResource RoundTextBox}" 
+            <TextBox x:Name="GetX1_Input" Style="{StaticResource RoundTextBox}"
                  MaxHeight="30"  
                  Margin="25, 0, 10, 0" 
                  Grid.Row="0" 
-                 Grid.Column="0" Text="0.1"/>
+                 Grid.Column="0"
+                 Text="0.1"
+                 Height="26"
+            />
 
-            <Label  Content="X2:" 
+            <Label Content="X2:" 
                 VerticalAlignment="Center" 
                 Grid.Row="1" 
                 Grid.Column="0" 
                 FontFamily="Calibri" 
                 FontSize="14"/>
-            <TextBox x:Name="GetX2_Input" Style="{StaticResource RoundTextBox}" 
+            <TextBox x:Name="GetX2_Input" Style="{StaticResource RoundTextBox}"
+                 Height="26"
                  MaxHeight="30"  
                  Margin="25, 0, 10, 0" 
                  Grid.Row="1" 
@@ -51,13 +55,13 @@
                FontFamily="Calibri" 
                FontSize="14"/>
             <TextBox x:Name="GetN_Input" Style="{StaticResource RoundTextBox}" 
+                 Height="26"
                  MaxHeight="30"  
                  Margin="25, 0, 10, 0" 
                  Grid.Row="0" 
                  Grid.Column="1" Text="10"/>
 
-            <TextBox x:Name="ResultTextBox" Style="{StaticResource RoundTextBox}" 
-                 Text="Лаб. раб. №7 Ст.Гр. 10701219 Колосов А.А"
+            <TextBox x:Name="ResultTextBox" Style="{StaticResource RoundTextBox}"
                  Margin="10" 
                  IsReadOnly="True" 
                  Grid.Column="0" 
@@ -65,6 +69,19 @@
                  Grid.RowSpan="2" 
                  Grid.ColumnSpan="3"/>
 
+            <Label Content="M:" 
+               VerticalAlignment="Center" 
+               Grid.Row="1" Grid.Column="1" 
+               FontFamily="Calibri" 
+               FontSize="14"/>
+            <TextBox Style="{StaticResource RoundTextBox}"
+                     Height="26"
+                     MaxHeight="30" Margin="25, 0, 10, 0"
+                     x:Name="GetM_Input"
+                     Grid.Column="1"
+                     Text="10"
+                     Grid.Row="1"/>
+            
             <Button Style="{StaticResource RoundCorner}" 
                 Grid.Column="0" 
                 Grid.ColumnSpan="3" 
@@ -72,14 +89,8 @@
                 MaxHeight="40" 
                 MaxWidth="240" 
                 Margin="5" 
-                Content="Start" Click="Button_Click"
-                />
-            <Label Content="M:" 
-               VerticalAlignment="Center" 
-               Grid.Row="1" Grid.Column="1" 
-               FontFamily="Calibri" 
-               FontSize="14"/>
-            <TextBox Style="{StaticResource RoundTextBox}" MaxHeight="30" Margin="25, 0, 10, 0" x:Name="GetM_Input" Grid.Column="1" Text="10" Grid.Row="1"/>
+                Content="Start" Click="Button_Click" Foreground="Black"
+            />
         </Grid>
 
     </Grid>

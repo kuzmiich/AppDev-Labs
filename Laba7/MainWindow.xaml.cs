@@ -45,7 +45,7 @@ namespace Laba7
                     new RadioButtonViewModel{GetContentText="e^x", MathFunction=(double num) => Pow(E, num) }
                 }
             );
-            ResultTextBox.Text += "Лаб. раб. №7 Ст.Гр. 10701219 Колосов А.А\n";
+            ResultTextBox.Text += "Лаб. раб. №7 Ст.Гр. 10701219 Кузьмич И.В.\n";
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -77,7 +77,7 @@ namespace Laba7
             }
             ResultTextBox.Clear();
             string resultString =
-               "Лаб. раб. №7 Ст.Гр. 10701219 Колосов А.А\n" +
+               "Лаб. раб. №7 Ст.Гр. 10701219 Кузьмич И.В.\n" +
                $"x1 = {text_x1}\n" +
                $"x2 = {text_x2}\n" +
                $"N = {text_n}\n";
