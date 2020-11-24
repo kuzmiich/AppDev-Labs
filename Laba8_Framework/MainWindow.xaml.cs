@@ -54,6 +54,7 @@ namespace Lab_Work_8_Framework
             e.CanExecute = true;
         }
     }
+
     public static class LiveChartVM
     {
         public static async Task<ChartValues<double>> GetPointsAsync(double x1, double x2, double h)

@@ -25,6 +25,8 @@ namespace Laba9
     public partial class MainWindow : Window
     {
         public readonly string TitleText = "Лаб. раб. №9 Ст.Гр. 10701219 Колосов А.А\n";
+        private Laba9.Styles.FuncGroupBox MathFuncGroup;
+
         public RGBViewModel viewModel { get; set; } = new RGBViewModel(((SolidColorBrush)Application.Current.Resources["BackgroundColorBrush"]).Color);
         public MainWindow()
         {

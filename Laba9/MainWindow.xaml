@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba9" 
         xmlns:local1="clr-namespace:Laba9.View"
-        xmlns:local2="clr-namespace:Laba9.Styles"
         mc:Ignorable="d"
-        Title="Лаб. раб. №9 Ст.Гр. 10701219 Колосов А.А" Height="450" Width="600" Loaded="Window_Loaded">
+        Title="Лаб. раб. №9 Ст.Гр. 10701219 Кузьмич И.В." Height="450" Width="600" Loaded="Window_Loaded">
     <TabControl>
         <TabItem Header="Основное приложение" >
             <Grid Background="{DynamicResource BackgroundColorBrush}">
@@ -24,7 +23,7 @@
                         <RowDefinition/>
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
-                    <local2:FuncGroupBox x:Name="MathFuncGroup" Margin="5" Grid.Column="2" Grid.RowSpan="2"/>
+                    <local1:FuncGroupBox x:Name="MathFuncGroup" Margin="5" Grid.Column="2" Grid.RowSpan="2"/>
                     <Label Content="X1:" 
                VerticalAlignment="Center" 
                Grid.Row="0" 
