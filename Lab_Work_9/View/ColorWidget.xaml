@@ -30,15 +30,16 @@
             <TextBlock Text="{Binding Path=viewModel.R, Mode=OneWay}" Grid.Column="0"/>
             <TextBlock Text="{Binding Path=viewModel.G, Mode=OneWay}" Grid.Column="1"/>
             <TextBlock Text="{Binding Path=viewModel.B, Mode=OneWay}" Grid.Column="2"/>
-            <Slider Value="{Binding Path=viewModel.R, Mode=TwoWay}" Grid.Column="0" x:Name="sliderR" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="255"/>
+            <Slider Value="{Binding Path=viewModel.R, Mode=TwoWay}" Grid.Column="0" x:Name="sliderR" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="240"/>
+            <Slider Value="{Binding Path=viewModel.G, Mode=TwoWay}" Grid.Column="1" x:Name="sliderG" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="240"/>
+            <Slider Value="{Binding Path=viewModel.B, Mode=TwoWay}" Grid.Column="2" x:Name="sliderB" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Maximum="240"/>
+
             <Border Grid.Column="0" Grid.Row="1" BorderBrush="Red" BorderThickness="4" MaxHeight="50" MaxWidth="50">
                 <Label FontWeight="Bold" Content="R"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
-            <Slider Value="{Binding Path=viewModel.G, Mode=TwoWay}" Grid.Column="1" x:Name="sliderG" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="255"/>
             <Border Grid.Column="1" Grid.Row="1" BorderBrush="Green" BorderThickness="4" MaxHeight="50" MaxWidth="50">
                 <Label FontWeight="Bold" Content="G"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
-            <Slider Value="{Binding Path=viewModel.B, Mode=TwoWay}" Grid.Column="2" x:Name="sliderB" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Maximum="255"/>
             <Border Grid.Column="2" Grid.Row="1" BorderBrush="Blue" BorderThickness="4" MaxHeight="50" MaxWidth="50">
                 <Label FontWeight="Bold" Content="B"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
@@ -54,12 +55,7 @@
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
             <Label Content="Новый цвет:"/>
-            <Ellipse VerticalAlignment="Top" Height="80" Width="80" StrokeThickness="3" StrokeDashArray="1 2"
-        Stroke="Gray" StrokeDashCap="Round">
-                <Ellipse.Fill>
-                    <SolidColorBrush Color="{Binding Path=viewModel.CurrentColor}"/>
-                </Ellipse.Fill>
-            </Ellipse>
+            <Border Height="80" Width="80" BorderThickness="3" Background="{Binding Path=viewModel.CurrentColor}" BorderBrush="Gray"/>
         </StackPanel>
         <Grid Grid.Row="2" Grid.Column="1">
             <Grid.ColumnDefinitions>
