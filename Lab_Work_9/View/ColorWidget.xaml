@@ -30,9 +30,9 @@
             <TextBlock Text="{Binding Path=viewModel.R, Mode=OneWay}" Grid.Column="0"/>
             <TextBlock Text="{Binding Path=viewModel.G, Mode=OneWay}" Grid.Column="1"/>
             <TextBlock Text="{Binding Path=viewModel.B, Mode=OneWay}" Grid.Column="2"/>
-            <Slider Value="{Binding Path=viewModel.R, Mode=TwoWay}" Grid.Column="0" x:Name="sliderR" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="240"/>
-            <Slider Value="{Binding Path=viewModel.G, Mode=TwoWay}" Grid.Column="1" x:Name="sliderG" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="240"/>
-            <Slider Value="{Binding Path=viewModel.B, Mode=TwoWay}" Grid.Column="2" x:Name="sliderB" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Maximum="240"/>
+            <Slider Value="{Binding Path=viewModel.R, Mode=TwoWay}" Grid.Column="0" x:Name="sliderR" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="255"/>
+            <Slider Value="{Binding Path=viewModel.G, Mode=TwoWay}" Grid.Column="1" x:Name="sliderG" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="255"/>
+            <Slider Value="{Binding Path=viewModel.B, Mode=TwoWay}" Grid.Column="2" x:Name="sliderB" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Maximum="255"/>
 
             <Border Grid.Column="0" Grid.Row="1" BorderBrush="Red" BorderThickness="4" MaxHeight="50" MaxWidth="50">
                 <Label FontWeight="Bold" Content="R"  HorizontalAlignment="Center" VerticalAlignment="Center"/>

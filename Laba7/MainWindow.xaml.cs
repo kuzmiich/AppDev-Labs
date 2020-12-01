@@ -37,7 +37,7 @@ namespace Laba7
                     new RadioButtonViewModel
                     {
                         GetContentText="sh(x)",
-                        MathFunction= (double num) => (Pow(E, num) - Pow(E, -num)) / 2d,
+                        MathFunction=(double num)=>(Pow(E, num) - Pow(E, -num))/2d,
                         IsFuncChecked = true
                     },
                     new RadioButtonViewModel{GetContentText="x^2", MathFunction=(double num) => Pow(num, 2) },

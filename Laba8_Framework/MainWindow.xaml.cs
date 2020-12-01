@@ -62,7 +62,7 @@ namespace Lab_Work_8_Framework
             return await Task.Run(() => GetPoints(x1, x2, h));
         }
 
-        public static ChartValues<double> GetPoints(double x1, double x2, double h)
+        private static ChartValues<double> GetPoints(double x1, double x2, double h)
         {
             var result = new ChartValues<double>();
             for (;x1 <= x2; x1 += h)
@@ -73,17 +73,11 @@ namespace Lab_Work_8_Framework
             return result;
         }
 
-        private static async Task<double> CalculateOperationAsync(double x, double y, double z)
-        {
-            return await Task.Run(() => CalculateOperation(x, y, z));
-        }
-
         private static double CalculateOperation(double x, double y, double z)
         {
-            return Pow(y, Pow(x, (double)1 / 3)) +
-                Pow(Cos(y), 3) *
-                (Abs(x - y) * (1d + (Pow(Sin(z), 2)) /
-                (Sqrt(x + y))) / (Pow(Math.E, x - y) + (x / 2d)));
+            return Pow(y, (x + 1)) / (Pow(Abs(y - 2), 1 / 3) + 3)
+                    + ((x + (y / 2)) / (2 * Abs(x + y))
+                    * Pow(x + 1, -1 / Sin(z)));
         }
     }
 }
