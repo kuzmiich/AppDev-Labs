@@ -5,18 +5,50 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Lab_Work_9.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="600">
     <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition Width="260"/>
+        </Grid.ColumnDefinitions>
+
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="260"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid Grid.RowSpan="3">
+        
+        <StackPanel Grid.Row="0" Orientation="Vertical" Grid.RowSpan="2" Grid.Column="0">
+            <Label Content="Текущий цвет:" HorizontalAlignment="Center"/>
+            <Rectangle 
+                Height="80"
+                Width="80" 
+                Margin="30"
+                StrokeThickness="3"
+                StrokeDashArray="1 2"
+                Stroke="Gray"
+                StrokeDashCap="Round">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{Binding viewModel.StartColor}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
+            <Label Content="Измененный цвет:" HorizontalAlignment="Center"/>
+            <Rectangle Height="80" 
+                       Width="80"
+                       Margin="30"
+                       StrokeThickness="3"
+                       StrokeDashArray="1 2"
+                       Stroke="Gray" 
+                       StrokeDashCap="Round">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{Binding viewModel.CurrentColor}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
+
+        <Grid Grid.Column="2" Grid.RowSpan="2" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="40"/>
@@ -27,9 +59,6 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text="{Binding Path=viewModel.R, Mode=OneWay}" Grid.Column="0"/>
-            <TextBlock Text="{Binding Path=viewModel.G, Mode=OneWay}" Grid.Column="1"/>
-            <TextBlock Text="{Binding Path=viewModel.B, Mode=OneWay}" Grid.Column="2"/>
             <Slider Value="{Binding Path=viewModel.R, Mode=TwoWay}" Grid.Column="0" x:Name="sliderR" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="255"/>
             <Slider Value="{Binding Path=viewModel.G, Mode=TwoWay}" Grid.Column="1" x:Name="sliderG" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Minimum="0" Maximum="255"/>
             <Slider Value="{Binding Path=viewModel.B, Mode=TwoWay}" Grid.Column="2" x:Name="sliderB" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Maximum="255"/>
@@ -44,26 +73,13 @@
                 <Label FontWeight="Bold" Content="B"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
         </Grid>
-        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
-            <Label Content="Старый цвет:"/>
-            <Ellipse VerticalAlignment="Top" Height="80" Width="80" StrokeThickness="3" StrokeDashArray="1 2"
-        Stroke="Gray" StrokeDashCap="Round">
-                <Ellipse.Fill>
-                    <SolidColorBrush Color="{Binding Path=viewModel.StartColor}"/>
-                </Ellipse.Fill>
-            </Ellipse>
-        </StackPanel>
-        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
-            <Label Content="Новый цвет:"/>
-            <Border Height="80" Width="80" BorderThickness="3" Background="{Binding Path=viewModel.CurrentColor}" BorderBrush="Gray"/>
-        </StackPanel>
-        <Grid Grid.Row="2" Grid.Column="1">
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="10,0,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Style="{DynamicResource RoundCorner}" IsDefault="True"  x:Name="OkButton" Content="OK" Margin="5, 20, 5, 0" Grid.Column="0"/>
-            <Button Style="{DynamicResource RoundCorner}" IsCancel="True" x:Name="CancelButton" Content="Отмена" Margin="5, 20, 5, 0" Grid.Column="1"/>
+            <Button Style="{DynamicResource RoundCorner}" IsDefault="True"  x:Name="OkButton" Content="OK" Margin="8" Padding="0 0 10 0" Grid.Column="0"/>
+            <Button Style="{DynamicResource RoundCorner}" IsCancel="True" x:Name="CancelButton" Content="Отмена" Margin="8"  Padding="10 0 0 0" Grid.Column="1"/>
         </Grid>
     </Grid>
 </UserControl>

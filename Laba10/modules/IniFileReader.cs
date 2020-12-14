@@ -10,15 +10,9 @@ namespace Laba10.modules
     {
         string Path; //Имя файла.
 
-        [DllImport("kernel32", CharSet = CharSet.Auto)] // Подключаем kernel32.dll и описываем его функцию WritePrivateProfilesString
-        static extern long WritePrivateProfileString(string Section, string Key, string Value, string FilePath);
-
-        [DllImport("kernel32", CharSet = CharSet.Auto)] // Еще раз подключаем kernel32.dll, а теперь описываем функцию GetPrivateProfileString
-        static extern int GetPrivateProfileString(string Section, string Key, string Default, StringBuilder RetVal, int Size, string FilePath);
-
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+        
         static extern uint GetPrivateProfileSection(string lpAppName, IntPtr lpReturnedString, uint nSize, string lpFileName);
-        // С помощью конструктора записываем пусть до файла и его имя.
+        // С помощью конструктора записываем путь до файла и его имя.
         public IniFileReader(string IniPath)
         {
             Path = new FileInfo(IniPath).FullName.ToString();

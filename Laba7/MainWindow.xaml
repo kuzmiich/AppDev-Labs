@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba7" xmlns:local1="clr-namespace:Laba7.View"
         mc:Ignorable="d"
-        Title="Лаб. раб. №7 Ст.Гр. 10701219 Колосов А.А" Height="450" Width="550" Loaded="Window_Loaded">
+        Title="Лаб. раб. №7 Ст.Гр. 10701219 Кузьмич И.В." Height="450" Width="550" Loaded="Window_Loaded">
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>

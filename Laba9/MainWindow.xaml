@@ -58,8 +58,8 @@
                  Grid.Row="0" 
                  Grid.Column="1" Text="10"/>
 
-                    <TextBox x:Name="ResultTextBox" Style="{StaticResource RoundTextBox}" 
-                 Margin="10" 
+                 <TextBox x:Name="ResultTextBox" Style="{StaticResource RoundTextBox}" 
+                 Margin="10 20" 
                  IsReadOnly="True" 
                  Grid.Column="0" 
                  Grid.Row="2" 
@@ -72,7 +72,7 @@
                 Grid.Row="5" 
                 MaxHeight="40" 
                 MaxWidth="340" 
-                Margin="5" 
+                Margin="15 5 15 5" 
                 Content="Start" Click="Button_Click"
                 />
                     <Label Content="M:" 
@@ -81,7 +81,7 @@
                FontFamily="Calibri" 
                FontSize="14"/>
                     <TextBox Style="{StaticResource RoundTextBox}" MaxHeight="30" Margin="25, 0, 10, 0" x:Name="GetM_Input" Grid.Column="1" Text="10" Grid.Row="1"/>
-                    <Button  Style="{DynamicResource RoundCorner}" Margin="5" Content="Color" x:Name="button"  Grid.Row="4" Grid.Column="2"  Click="button_Click_1" />
+                    <Button  Style="{DynamicResource RoundCorner}" Margin="10 5 10 5" Content="Color" x:Name="button"  Grid.Row="4" Grid.Column="2"  Click="button_Click_1" />
                 </Grid>
             </Grid>
         </TabItem>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lab_Work_6.Properties
+namespace Laba8.Properties
 {
 
 

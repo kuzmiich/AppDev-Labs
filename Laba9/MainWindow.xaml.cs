@@ -24,7 +24,7 @@ namespace Lab_Work_9
     /// </summary>
     public partial class MainWindow : Window
     {
-        public readonly string TitleText = "Лаб. раб. №9 Ст.Гр. 10701219 Колосов А.А\n";
+        public readonly string TitleText = "Лаб. раб. №9 Ст.Гр. 10701219 Кузьмич И.В.\n";
         public RGBViewModel viewModel { get; set; } = new RGBViewModel(((SolidColorBrush)Application.Current.Resources["BackgroundColorBrush"]).Color);
         public MainWindow()
         {
@@ -117,6 +117,5 @@ namespace Lab_Work_9
             }
 
         }
-
     }
 }

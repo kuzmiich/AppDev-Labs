@@ -2,18 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Laba10
 {
@@ -37,8 +28,6 @@ namespace Laba10
             AddButton.Content = _iniFilereader.ReadINI("settings","AddButtonText");
             CloseBtnTextBlock.Text = _iniFilereader.ReadINI("settings","CloseButtonTextBlock");
             Title = _iniFilereader.ReadINI("settings","WindowTitle").ToString();
-            
-
         }
         private void AddRange(IEnumerable<string> collection)
         {
@@ -90,18 +79,6 @@ namespace Laba10
                 Array.Sort(words);
                 ResultTextBox.Text = string.Join('\n', words);
             }
-        }
-
-        private void StringComboBox_Loaded(object sender, RoutedEventArgs e)
-        {
-            /*List<string> vs = new List<string>()
-            {
-                "Kolosov AA",
-                "Kuzmich Ivan",
-                "Kramsaev Volodya",
-                "Nikita Vershinin"
-            };
-            StringComboBox.ItemsSource = vs;*/
         }
     }
 }
