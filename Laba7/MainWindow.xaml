@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba7" xmlns:local1="clr-namespace:Laba7.View"
         mc:Ignorable="d"
-        Title="Лаб. раб. №7 Ст.Гр. 10701219 Кузьмич И.В." Height="450" Width="550" Loaded="Window_Loaded">
+        Title="Лаб. раб. №7 Ст.Гр. 10701219 Кузьмич И.В."
+        Height="450"
+        Width="550"
+        Loaded="Window_Loaded"
+        >
+    
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -20,6 +25,13 @@
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
+            <Menu Height="25" VerticalAlignment="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="Exit" Click="Button_Exit"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Edit" ></MenuItem>
+                <MenuItem Header="View" ></MenuItem>
+            </Menu>
             <local1:FuncGroupBox x:Name="MathFuncGroup" Margin="5" Grid.Column="2" Grid.RowSpan="2" />
             <Label Content="X1:" 
                VerticalAlignment="Center" 
@@ -32,7 +44,7 @@
                  Margin="25, 0, 10, 0" 
                  Grid.Row="0" 
                  Grid.Column="0"
-                 Text="0.1"
+                 Text="0,1"
                  Height="26"
             />
 

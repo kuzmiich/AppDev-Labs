@@ -14,8 +14,6 @@ namespace Task1
         private void Form1_Load(object sender, EventArgs e)
         {
             this.MinimumSize = this.Size;
-            chart1.Series[0].Points.Clear();
-            chart1.Series[1].Points.Clear();
         }
 
         private double Func(double x, double y, double z)
@@ -30,6 +28,8 @@ namespace Task1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            chart1.Series[0].Points.Clear();
+            chart1.Series[1].Points.Clear();
             double xMin = Convert.ToDouble(textBox1.Text);
             double xMax = Convert.ToDouble(textBox2.Text);
             int N = Convert.ToInt32(textBox3.Text);

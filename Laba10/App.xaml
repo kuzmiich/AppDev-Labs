@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <Style x:Key="MainFontStyle">
                 <Setter Property="Control.FontSize" Value="15"/>
-                <Setter Property="Control.FontFamily" Value="Arial"/>
+                <Setter Property="Control.FontFamily" Value="Times New Roman"/>
             </Style>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Styles/styles.xaml"/>

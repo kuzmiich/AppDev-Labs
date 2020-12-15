@@ -13,7 +13,7 @@ namespace Laba10
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly IniFileReader _iniFilereader = new IniFileReader("config.ini");
+        private readonly JsonFileReader _jsonFileReader = new JsonFileReader("settings.json");
         public MainWindow()
         {
             InitializeComponent();
@@ -22,12 +22,9 @@ namespace Laba10
 
         private void ReadIniFile()
         {
-            Width = Convert.ToInt32(_iniFilereader.ReadINI("settings", "Width")); 
-            Height = Convert.ToInt32(_iniFilereader.ReadINI("settings", "Height"));
-            AddRange(_iniFilereader.ReadINI("settings", "StandartText").Split(":"));
-            AddButton.Content = _iniFilereader.ReadINI("settings","AddButtonText");
-            CloseBtnTextBlock.Text = _iniFilereader.ReadINI("settings","CloseButtonTextBlock");
-            Title = _iniFilereader.ReadINI("settings","WindowTitle").ToString();
+            Width = Convert.ToInt32(JsonFileReader.ReadFile().Width); 
+            Height = Convert.ToInt32(JsonFileReader.ReadFile().Height);
+            Title = Convert.ToString(JsonFileReader.ReadFile().Title);
         }
         private void AddRange(IEnumerable<string> collection)
         {
@@ -39,7 +36,6 @@ namespace Laba10
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             ReadIniFile();
-            StringComboBox.ItemsSource = _strings;
         }
 
         private void SaveCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -49,7 +45,7 @@ namespace Laba10
 
         private void SaveCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            string text = StringComboBox.Text;
+            string text = .Text;
             if (text.Length > 0)
             {
                 StringComboBox.Text = string.Empty;
@@ -74,11 +70,16 @@ namespace Laba10
             string item = comboBox?.SelectedItem?.ToString();
             if (item != null)
             {
-                ResultTextBox.Clear();
+                ResultTextBlock.Clear();
                 string[] words = item.Split();
                 Array.Sort(words);
-                ResultTextBox.Text = string.Join('\n', words);
+                ResultTextBlock.Text = string.Join('\n', words);
             }
+        }
+
+        private void Window_DpiChanged(object sender, DpiChangedEventArgs e)
+        {
+
         }
     }
 }

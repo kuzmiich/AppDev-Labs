@@ -58,7 +58,7 @@
                  Grid.Row="0" 
                  Grid.Column="1" Text="10"/>
 
-                 <TextBox x:Name="ResultTextBox" Style="{StaticResource RoundTextBox}" 
+                    <TextBox x:Name="ResultTextBox" Style="{StaticResource RoundTextBox}" 
                  Margin="10 20" 
                  IsReadOnly="True" 
                  Grid.Column="0" 
@@ -66,7 +66,7 @@
                  Grid.RowSpan="2" 
                  Grid.ColumnSpan="3"/>
 
-                <Button Style="{StaticResource RoundCorner}" 
+                    <Button Style="{StaticResource RoundCorner}" 
                 Grid.Column="0" 
                 Grid.ColumnSpan="2" 
                 Grid.Row="5" 
@@ -85,7 +85,7 @@
                 </Grid>
             </Grid>
         </TabItem>
-        <TabItem Header="Настройка цвета">
+        <TabItem Header="Настройка цвета" Margin="-2,-2,-2,2">
             <local1:ColorWidget x:Name="MenuColorWidget"/>
         </TabItem>
     </TabControl>
