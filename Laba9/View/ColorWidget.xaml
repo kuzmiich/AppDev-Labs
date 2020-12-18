@@ -17,9 +17,23 @@
             <RowDefinition/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        
-        <StackPanel Grid.Row="1" Orientation="Vertical" Grid.RowSpan="2" Grid.Column="0">
+
+        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
             <Label Content="Текущий цвет:" HorizontalAlignment="Center"/>
+            <Rectangle Height="80" 
+                       Width="80"
+                       Margin="30"
+                       StrokeThickness="3"
+                       StrokeDashArray="1 2"
+                       Stroke="Gray" 
+                       StrokeDashCap="Round">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{Binding viewModel.CurrentColor}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
+            <Label Content="Измененный цвет:" HorizontalAlignment="Center"/>
             <Rectangle 
                 Height="80"
                 Width="80" 
@@ -30,20 +44,6 @@
                 StrokeDashCap="Round">
                 <Rectangle.Fill>
                     <SolidColorBrush Color="{Binding viewModel.StartColor}"/>
-                </Rectangle.Fill>
-            </Rectangle>
-        </StackPanel>
-        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
-            <Label Content="Измененный цвет:" HorizontalAlignment="Center"/>
-            <Rectangle Height="80" 
-                       Width="80"
-                       Margin="30"
-                       StrokeThickness="3"
-                       StrokeDashArray="1 2"
-                       Stroke="Gray" 
-                       StrokeDashCap="Round">
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="{Binding viewModel.CurrentColor}"/>
                 </Rectangle.Fill>
             </Rectangle>
         </StackPanel>

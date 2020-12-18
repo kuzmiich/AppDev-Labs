@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace Lab_Work_9.ViewModels
 {
-    public class RadioButtonViewModel : INotifyPropertyChanged
+    public class RadioButtonViewModel
     {
         private string _contentText;
 
@@ -18,6 +15,7 @@ namespace Lab_Work_9.ViewModels
 
         public delegate double MathFunctionHandler(double value);
         public MathFunctionHandler MathFunction { get; set; }
+
         private void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

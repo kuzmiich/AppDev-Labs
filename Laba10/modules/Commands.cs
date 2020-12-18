@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace Laba10.modules
 {
-	public static class CustomCommands
+    public static class CustomCommands
 	{
 		public static readonly RoutedUICommand Save = new RoutedUICommand
 			(

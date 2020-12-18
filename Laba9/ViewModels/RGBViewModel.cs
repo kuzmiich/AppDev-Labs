@@ -13,14 +13,7 @@ namespace Lab_Work_9.ViewModels
         private Color _startColor;
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string name = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-        private void OnColorPartChanged()
-        {
-            CurrentColor = Color.FromRgb(R, G, B);
-        }
+
         public RGBViewModel()
         {
             StartColor = Color.FromRgb(0, 0, 0);
@@ -34,7 +27,17 @@ namespace Lab_Work_9.ViewModels
             StartColor = startColor;
             CurrentColor = StartColor;
         }
-       public Color StartColor
+
+        private void OnPropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+        private void OnColorPartChanged()
+        {
+            CurrentColor = Color.FromRgb(R, G, B);
+        }
+        
+        public Color StartColor
         {
             get
             {

@@ -10,8 +10,8 @@
         Width="350"
         Height="250">
     <Window.CommandBindings>
-        <CommandBinding Command="local:CustomCommands.Save" CanExecute="SaveCommand_CanExecute" Executed="SaveCommand_Executed"/>
         <CommandBinding Command="local:CustomCommands.Exit" CanExecute="ExitCommand_CanExecute" Executed="ExitCommand_Executed"/>
+        <CommandBinding Command="local:CustomCommands.Save" CanExecute="SaveCommand_CanExecute" Executed="SaveCommand_Executed"/>
     </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
@@ -23,13 +23,9 @@
             <ColumnDefinition Width="100*"></ColumnDefinition>
             <ColumnDefinition Width="100*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Click="Exit" BorderThickness="1" BorderBrush="Black" Margin="10,93,10,27" Content="Сохранить" Grid.Column="1"/>
 
-        <Button Click="Exit" BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="3" Grid.Row="1" Margin="92,20,92,20">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" >
-                <Image Source="./Images/exit.png" Margin="6" />
-                <TextBlock Text="Exit" Style="{StaticResource RoundTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
+        <Button Click="ExitCommand_CanExecute" BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="3" Grid.Row="1" Margin="92,20,92,20">
+            <TextBlock Text="Exit" Style="{StaticResource RoundTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
 
         <ComboBox x:Name="comboBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" Width="104" Height="23"/>

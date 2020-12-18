@@ -8,15 +8,15 @@ namespace Laba10.modules
 {
     public class ProjectSettings
     {
-        private string _title { get; set; }
-        private int _width { get; set; }
-        private int _height { get; set; }
+        public string Title { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
 
-        public ProjectSettings(string Title, int Width, int Height)
+        public ProjectSettings(string title, int width, int height)
         {
-            _title = Title;
-            _width = Width;
-            _height = Height;
+            Title = title;
+            Width = width;
+            Height = height;
         }
     }
 }

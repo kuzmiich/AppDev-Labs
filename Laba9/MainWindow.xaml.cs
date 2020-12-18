@@ -1,21 +1,9 @@
-﻿using Lab_Work_9.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using Lab_Work_9.Models;
 using Lab_Work_9.View;
+using Lab_Work_9.ViewModels;
+using System.Windows;
+using System.Windows.Media;
 using static System.Math;
-using Lab_Work_9.Models;
 
 namespace Lab_Work_9
 {
@@ -67,7 +55,7 @@ namespace Lab_Work_9
             viewModel.StartColor = viewModel.CurrentColor;
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             string text_x1 = GetX1_Input.Text;
             string text_x2 = GetX2_Input.Text;
@@ -103,7 +91,7 @@ namespace Lab_Work_9
             ResultTextBox.Text += resultString;
             if (Is_Succes)
             {
-                ResultTextBox.Text += await MathFunctions.StartCountAsync(x1, x2, n, m, MathFuncGroup.UserChoiceMathFunction);
+                ResultTextBox.Text += MathFunctions.StartCount(x1, x2, n, m, MathFuncGroup.UserChoiceMathFunction);
             }
         }
 

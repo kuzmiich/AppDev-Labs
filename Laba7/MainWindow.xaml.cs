@@ -47,7 +47,7 @@ namespace Laba7
             );
             ResultTextBox.Text += "Лаб. раб. №7 Ст.Гр. 10701219 Кузьмич И.В.\n";
         }
-        private async void Button_Exit(object sender, RoutedEventArgs e)
+        private void Button_Exit(object sender, RoutedEventArgs e)
         {
             Close();
         }
