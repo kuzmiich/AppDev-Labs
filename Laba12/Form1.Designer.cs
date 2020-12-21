@@ -111,9 +111,9 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 30);
+            this.toolStripButton1.Size = new System.Drawing.Size(28, 30);
             this.toolStripButton1.ToolTipText = "Построить";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -187,8 +187,8 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(110, 30);
-            this.toolStripLabel5.Text = "Шаг разметки по X";
+            this.toolStripLabel5.Size = new System.Drawing.Size(106, 30);
+            this.toolStripLabel5.Text = "Количество точек";
             // 
             // toolStripTextBox3
             // 

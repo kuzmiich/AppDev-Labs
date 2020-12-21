@@ -91,7 +91,7 @@
             this.toolStripSeparator1,
             this.toolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(222, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(222, 98);
             // 
             // DrawLineToolStripMenuItem
             // 
@@ -126,28 +126,28 @@
             // BlackToolStripMenuItem
             // 
             this.BlackToolStripMenuItem.Name = "BlackToolStripMenuItem";
-            this.BlackToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.BlackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.BlackToolStripMenuItem.Text = "Черный";
             this.BlackToolStripMenuItem.Click += new System.EventHandler(this.BlackToolStripMenuItem_Click);
             // 
             // redToolStripMenuItem
             // 
             this.redToolStripMenuItem.Name = "redToolStripMenuItem";
-            this.redToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.redToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.redToolStripMenuItem.Text = "Красный";
             this.redToolStripMenuItem.Click += new System.EventHandler(this.redToolStripMenuItem_Click);
             // 
             // GreenToolStripMenuItem
             // 
             this.GreenToolStripMenuItem.Name = "GreenToolStripMenuItem";
-            this.GreenToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.GreenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.GreenToolStripMenuItem.Text = "Зеленый";
             this.GreenToolStripMenuItem.Click += new System.EventHandler(this.GreenToolStripMenuItem_Click);
             // 
             // BlueToolStripMenuItem
             // 
             this.BlueToolStripMenuItem.Name = "BlueToolStripMenuItem";
-            this.BlueToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.BlueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.BlueToolStripMenuItem.Text = "Синий";
             this.BlueToolStripMenuItem.Click += new System.EventHandler(this.BlueToolStripMenuItem_Click);
             // 
@@ -185,7 +185,7 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // Form2
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,7 +196,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form2";
+            this.Name = "Form1";
             this.Text = "Первая форма";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

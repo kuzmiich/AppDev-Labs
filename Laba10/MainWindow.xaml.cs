@@ -17,7 +17,6 @@ namespace Laba10
         }
 
         private static readonly string path = "settings.json";
-        private ObservableCollection<string> _data = new ObservableCollection<string>();
         private static readonly JsonFileReader _jsonFileReader = new JsonFileReader(path);
         private async void ReadJsonFile()
         {
@@ -43,11 +42,15 @@ namespace Laba10
         private void SaveCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             string text = sourceTextBox.Text;
+            ProjectObject _data = new ProjectObject(string.Empty, 0, 0, string.Empty);
             if (text.Length > 0)
             {
                 sourceTextBox.Text = string.Empty;
-                _data.Add(text.Trim());
+                _data.Content = text;
             }
+            string path = "file.json";
+            var jsonFileReader = new JsonFileReader(path);
+            jsonFileReader.WriteFile(_data);
         }
 
         private void ExitCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -57,24 +60,25 @@ namespace Laba10
 
         private void ExitCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            _jsonFileReader.WriteFile(new ProjectObject(Title, (int)Width, (int)Height, string.Empty));
             Application.Current.Shutdown();
         }
 
-        private async void button_Click(object sender, RoutedEventArgs e)
+        private async void button_Execute(object sender, RoutedEventArgs e)
         {
-            var path = "file.json";
             var commandType = listBox.SelectedItem.ToString();
+            var path = "file.json";
             var jsonFileReader = new JsonFileReader(path);
             var text = sourceTextBox.Text;
-            var obj = new ProjectSettings(string.Empty, 0, 0, text);
+            var obj = new ProjectObject(string.Empty, 0, 0, text);
             if (commandType == "write")
             {
                 jsonFileReader.WriteFile(obj);
             } 
             else
             {
-                var content = await jsonFileReader.ReadFile();
-                resultTextBox.Text = content.Content;
+                var projectObj = await jsonFileReader.ReadFile();
+                resultTextBox.Text = projectObj.Content;
             }
         }
     }
