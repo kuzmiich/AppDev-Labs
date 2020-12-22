@@ -31,7 +31,7 @@ namespace Laba10.modules
         }
         public async void WriteFile(ProjectObject projectObj)
         {
-            using (FileStream fout = new FileStream(_path, FileMode.OpenOrCreate))
+            using (FileStream fout = new FileStream(_path, FileMode.Create))
             {
                 await JsonSerializer.SerializeAsync<ProjectObject>(fout, projectObj);
             }

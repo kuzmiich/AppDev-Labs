@@ -42,7 +42,7 @@ namespace Laba10
 
         private void SaveCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            _jsonFileReader.WriteFile(new ProjectObject(Title, (int)Width, (int)Height, sourceTextBox.Text));
+            _jsonFileReader.WriteFile(new ProjectObject(Title, (int)Width, (int)Height, string.Empty));
         }
 
         private void ExitCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
