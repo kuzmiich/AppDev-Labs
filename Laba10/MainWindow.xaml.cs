@@ -16,8 +16,9 @@ namespace Laba10
             InitializeComponent();
         }
 
-        private static readonly string path = "settings.json";
-        private static readonly JsonFileReader _jsonFileReader = new JsonFileReader(path);
+        private static readonly string pathSettings = "settings.json";
+        private static readonly string pathEntry = "file.json";
+        private static readonly JsonFileReader _jsonFileReader = new JsonFileReader(pathSettings);
         private async void ReadJsonFile()
         {
             var projectSettings = await _jsonFileReader.ReadFile();
@@ -41,16 +42,7 @@ namespace Laba10
 
         private void SaveCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            string text = sourceTextBox.Text;
-            ProjectObject _data = new ProjectObject(string.Empty, 0, 0, string.Empty);
-            if (text.Length > 0)
-            {
-                sourceTextBox.Text = string.Empty;
-                _data.Content = text;
-            }
-            string path = "file.json";
-            var jsonFileReader = new JsonFileReader(path);
-            jsonFileReader.WriteFile(_data);
+            _jsonFileReader.WriteFile(new ProjectObject(Title, (int)Width, (int)Height, sourceTextBox.Text));
         }
 
         private void ExitCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -60,15 +52,13 @@ namespace Laba10
 
         private void ExitCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            _jsonFileReader.WriteFile(new ProjectObject(Title, (int)Width, (int)Height, string.Empty));
             Application.Current.Shutdown();
         }
 
         private async void button_Execute(object sender, RoutedEventArgs e)
         {
             var commandType = listBox.SelectedItem.ToString();
-            var path = "file.json";
-            var jsonFileReader = new JsonFileReader(path);
+            var jsonFileReader = new JsonFileReader(pathEntry);
             var text = sourceTextBox.Text;
             var obj = new ProjectObject(string.Empty, 0, 0, text);
             if (commandType == "write")

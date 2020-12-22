@@ -14,7 +14,7 @@
             Height = height;
             Content = content;
         }
-        public ProjectObject() : this(string.Empty, 550, 500, string.Empty)
+        public ProjectObject() : this("Title", 550, 500, string.Empty)
         {
         }
     }

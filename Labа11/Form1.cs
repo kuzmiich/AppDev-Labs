@@ -21,21 +21,6 @@ namespace Task
         Graphics g;
         Color color = Color.Black;
 
-
-        private void DrawLineToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pn = new Pen(color, 5);
-            g = pictureBox1.CreateGraphics();
-            g.DrawLine(pn, 0, 0, pictureBox1.Width, pictureBox1.Height);
-        }
-
-        private void DrawTwoLinesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pn = new Pen(color, 5);
-            g = pictureBox1.CreateGraphics();
-            g.DrawLine(pn, 0, pictureBox1.Height, pictureBox1.Width, 0);
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult res = openFileDialog1.ShowDialog();
@@ -56,6 +41,19 @@ namespace Task
             this.Close();
         }
 
+        private void DrawLineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pn = new Pen(color, 5);
+            g = pictureBox1.CreateGraphics();
+            g.DrawLine(pn, 0, 0, pictureBox1.Width, pictureBox1.Height);
+        }
+
+        private void DrawTwoLinesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pn = new Pen(color, 5);
+            g = pictureBox1.CreateGraphics();
+            g.DrawLine(pn, 0, pictureBox1.Height, pictureBox1.Width, 0);
+        }
         private void BlackToolStripMenuItem_Click(object sender, EventArgs e)
         {
             color = Color.Black;
